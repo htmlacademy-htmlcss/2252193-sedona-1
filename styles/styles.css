@@ -14,35 +14,48 @@
   font-display: swap;
 }
 
+:root {
+  --font-heading-xlarge: 700 60px / 78px "PT Sans", sans-serif;
+  --font-adress: 400 40px / 40px "PT Sans", sans-serif;
+  --font-heading-h2: 700 30px / 36px "PT Sans", sans-serif;
+  --font-title-bold: 700 24px / 28px "PT Sans", sans-serif;
+  --font-subtitle-bold: 700 24px / 28px "PT Sans", sans-serif;
+  --font-subtitle: 400 22px / 26px "PT Sans", sans-serif;
+  --font-pagination: 700 20px / 36px "PT Sans", sans-serif;
+  --font-search-button: 700 20px / 36px "PT Sans", sans-serif;
+  --font-header: 700 20px / 24px "PT Sans", sans-serif;
+  --font-body-bold: 700 18px / 22px "PT Sans", sans-serif;
+  --font-body: 400 18px / 22px "PT Sans", sans-serif;
+  --font-header-button: 700 16px / 20px "PT Sans", sans-serif;
+  --font-caption-bold: 700 16px / 20px "PT Sans", sans-serif;
+  --font-caption: 400 16px / 20px "PT Sans", sans-serif;
+}
+
 body {
-  font-family: "PT Sans", sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 21px;
-  text-align: center;
-  color: black;
+  font: var(--font-body);
+  color: #000000;
   background-color: #FFFFFF;
 }
 
-/*Pages*/
-.navigation-list {
+fieldset {
+  border: none;
+}
+
+.list-reset {
   list-style-type: none;
 }
 
+/*Pages*/
 .navigation-link {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 24px;
-  color: black;
+  font: var(--font-header);
+  color: #000000;
   text-decoration: none;
 }
 
 .navigation-list .button {
   color: #FFFFFF;
   background-color: #756157; /*временое решение что бы видеть текст*/
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
+  font: var(--font-header-button);
   text-transform: uppercase;
 }
 
@@ -56,25 +69,16 @@ body {
 
 /*Title */
 .advantages-title h2 {
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 36px;
+  font: var(--font-heading-h2);
   text-transform: uppercase;
 }
 
 .advantages-title p {
-  font-size: 22px;
-  line-height: 26px;
-}
-
-.advantages-list {
-  list-style: none;
+  font: var(--font-subtitle);
 }
 
 .advantages-heading {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
+  font: var(--font-title-bold);
   text-transform: uppercase;
 }
 
@@ -94,25 +98,16 @@ body {
 }
 
 .services h2 {
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 36px;
+  font: var(--font-heading-h2);
   text-transform: uppercase;
 }
 
 .services .reason {
-  font-size: 22px;
-  line-height: 26px;
-}
-
-.services-list {
-  list-style: none;
+  font: var(--font-subtitle);
 }
 
 .services-title {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
+  font: var(--font-title-bold);
   text-transform: uppercase;
 }
 
@@ -122,23 +117,18 @@ body {
 }
 
 .search h2 {
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 36px;
+  font: var(--font-heading-h2);
   text-transform: uppercase;
 }
 
 .search p {
-  font-size: 22px;
-  line-height: 26px;
+  font: var(--font-subtitle);
 }
 
 .search .button {
+  font: var(--font-search-button);
   color: #FFFFFF;
-  background-color: rgba(117, 97, 87, 1); /*временое решение что бы видеть текст*/
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 36px;
+  background-color: #756157; /*временое решение что бы видеть текст*/
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -152,40 +142,30 @@ body {
 }
 
 .subscribe h2 {
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 36px;
+  font: var(--font-heading-h2);
   text-transform: uppercase;
   color: #FFFFFF;
 }
 
 .subscribe p {
-  font-size: 22px;
-  line-height: 26px;
+  font: var(--font-subtitle);
   color: #FFFFFF;
 }
 
 .subscribe .field {
-  line-height: 24px;
+  font: var(--font-body);
 }
 
 .subscribe .button {
+  font: var(--font-heading-h2);
   color: #FFFFFF;
   background-color: #82B3D3; /*временое решение что бы видеть текст*/
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 36px;
   text-transform: uppercase;
-}
-
-.footer-social-list {
-  list-style-type: none;
 }
 
 .footer-contacts-phone {
   font-style: normal;
-  font-size: 40px;
-  line-height: 40px;
+  font: var(--font-adress);
   text-decoration: none;
 }
 
@@ -199,45 +179,24 @@ body {
 }
 
 .inner-header-title {
-  font-weight: 700;
-  font-size: 60px;
-  line-height: 78px;
-}
-
-.breadcrumbs-list {
-  list-style-type: none;
+  font: var(--font-heading-xlarge);
 }
 
 .breadcrumbs-link {
-  font-size: 16px;
+  font: var(--font-caption);
   color: inherit;
   text-decoration: none;
 }
 
-fieldset {
-  border: none;
-}
 
 .catalog-filter-title,
 .inhabitation-cost {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 24px;
-}
-
-.catalog-filter-list {
-  list-style-type: none;
-}
-
-.catalog-filter-item {
-  line-height: 23px;
+  font: var(--font-header);
 }
 
 .accept,
 .reset {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
+  font: var(--font-caption-bold);
   text-transform: uppercase;
   color: #FFFFFF;
 }
@@ -249,34 +208,22 @@ fieldset {
 }
 
 .reset {
-  background-color: transparent;
-  border: 1px dotted black;
+  background-color: #7DB54F;
+  border: 1px dotted #000000;
 }
 
 .hotel-found {
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 36px;
+  font: var(--font-heading-h2);
   text-transform: uppercase;
 }
 
-.select-control,
-.font {
+.sorting,
+.sorting option {
   color: #333333;
 }
 
-.display-type-list {
-  list-style-type: none;
-}
-
-.inhabitation-list {
-  list-style-type: none;
-}
-
 .inhabitation-card-title {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
+  font: var(--font-subtitle-bold);
 }
 
 .inhabitation-name {
@@ -288,9 +235,7 @@ fieldset {
 }
 
 .inhabitation-card-button {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
+  font: var(--font-header-button);
   text-transform: uppercase;
   text-decoration: none;
   color: #FFFFFF;
@@ -299,9 +244,7 @@ fieldset {
 
 .inhabitation-card-favorites-button {
   color: #FFFFFF;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
+  font: var(--font-header-button);
   text-transform: uppercase;
   background-color: #82B3D3;
   border: none;
@@ -313,28 +256,19 @@ fieldset {
 
 .inhabitation-rating {
   color: #333333;
-  font-size: 16px;
-  line-height: 20px;
+  font: var(--font-caption);
   text-transform: uppercase;
 }
 
-.pagination {
-  list-style-type: none;
-}
-
 .pagination-item .pagination-current {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 36px;
-  color: black;
+  font: var(--font-pagination);
+  color: #000000;
   text-decoration: none;
   background-color: #F2F2F2;
 }
 
 .pagination-link {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 36px;
+  font: var(--font-pagination);
   color: white;
   text-decoration: none;
   background-color: #82B3D3;
@@ -342,37 +276,29 @@ fieldset {
 
 .pagination-item .hidden {
   color: #000000;
-  font-size: 22px;
-  line-height: 26px;
+  font: var(--font-subtitle);
   background-color: none;
   text-decoration: none;
 }
 
 .subscribe-catalog h2 {
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 36px;
+  font: var(--font-heading-h2);
   text-transform: uppercase;
 }
 
 .subscribe-catalog p {
-  font-size: 22px;
-  line-height: 26px;
+  font: var(--font-subtitle);
   color: #333333;
 }
 
 .subscribe-form .button {
   color: #FFFFFF;
   background-color: #82B3D3; /*временое решение что бы видеть текст*/
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 36px;
+  font: var(--font-search-button);
   text-transform: uppercase;
   border: none;
 }
 
 .subscribe-catalog .field {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 24px;
+  font: var(--font-body);
 }

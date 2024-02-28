@@ -1,0 +1,304 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+:root {
+  --font-heading-xlarge: 700 60px / 78px "PT Sans", sans-serif;
+  --font-adress: 400 40px / 40px "PT Sans", sans-serif;
+  --font-heading-h2: 700 30px / 36px "PT Sans", sans-serif;
+  --font-title-bold: 700 24px / 28px "PT Sans", sans-serif;
+  --font-subtitle-bold: 700 24px / 28px "PT Sans", sans-serif;
+  --font-subtitle: 400 22px / 26px "PT Sans", sans-serif;
+  --font-pagination: 700 20px / 36px "PT Sans", sans-serif;
+  --font-search-button: 700 20px / 36px "PT Sans", sans-serif;
+  --font-header: 700 20px / 24px "PT Sans", sans-serif;
+  --font-body-bold: 700 18px / 22px "PT Sans", sans-serif;
+  --font-body: 400 18px / 22px "PT Sans", sans-serif;
+  --font-header-button: 700 16px / 20px "PT Sans", sans-serif;
+  --font-caption-bold: 700 16px / 20px "PT Sans", sans-serif;
+  --font-caption: 400 16px / 20px "PT Sans", sans-serif;
+}
+
+body {
+  font: var(--font-body);
+  color: #000000;
+  background-color: #FFFFFF;
+}
+
+fieldset {
+  border: none;
+}
+
+.list-reset {
+  list-style-type: none;
+}
+
+/*Pages*/
+.navigation-link {
+  font: var(--font-header);
+  color: #000000;
+  text-decoration: none;
+}
+
+.navigation-list .button {
+  color: #FFFFFF;
+  background-color: #756157; /*временое решение что бы видеть текст*/
+  font: var(--font-header-button);
+  text-transform: uppercase;
+}
+
+.hero {
+  width: 1200px;
+  height: 485px;
+  background-image: url("../images/index-background.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+/*Title */
+.advantages-title h2 {
+  font: var(--font-heading-h2);
+  text-transform: uppercase;
+}
+
+.advantages-title p {
+  font: var(--font-subtitle);
+}
+
+.advantages-heading {
+  font: var(--font-title-bold);
+  text-transform: uppercase;
+}
+
+.advantages .first,
+.advantages .last {
+  color: #FFFFFF;
+  background-color: #82B3D3;
+}
+
+.advantages .second,
+.advantages .fourth {
+  background-color: #83B3D31F;
+}
+
+.advantages .third {
+  background-color: #83B3D333;
+}
+
+.services h2 {
+  font: var(--font-heading-h2);
+  text-transform: uppercase;
+}
+
+.services .reason {
+  font: var(--font-subtitle);
+}
+
+.services-title {
+  font: var(--font-title-bold);
+  text-transform: uppercase;
+}
+
+.services .first,
+.services .third {
+  background-color: #83B3D31F;
+}
+
+.search h2 {
+  font: var(--font-heading-h2);
+  text-transform: uppercase;
+}
+
+.search p {
+  font: var(--font-subtitle);
+}
+
+.search .button {
+  font: var(--font-search-button);
+  color: #FFFFFF;
+  background-color: #756157; /*временое решение что бы видеть текст*/
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.subscribe {
+  width: 1200px;
+  height: 415px;
+  background-image: url("../images/subscribe.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.subscribe h2 {
+  font: var(--font-heading-h2);
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.subscribe p {
+  font: var(--font-subtitle);
+  color: #FFFFFF;
+}
+
+.subscribe .field {
+  font: var(--font-body);
+}
+
+.subscribe .button {
+  font: var(--font-heading-h2);
+  color: #FFFFFF;
+  background-color: #82B3D3; /*временое решение что бы видеть текст*/
+  text-transform: uppercase;
+}
+
+.footer-contacts-phone {
+  font-style: normal;
+  font: var(--font-adress);
+  text-decoration: none;
+}
+
+.selection-menu {
+  width: 1200px;
+  height: 412px;
+  background-image: url("../images/filter.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  color: #FFFFFF;
+}
+
+.inner-header-title {
+  font: var(--font-heading-xlarge);
+}
+
+.breadcrumbs-link {
+  font: var(--font-caption);
+  color: inherit;
+  text-decoration: none;
+}
+
+
+.catalog-filter-title,
+.inhabitation-cost {
+  font: var(--font-header);
+}
+
+.accept,
+.reset {
+  font: var(--font-caption-bold);
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.accept {
+  background-color: #82B3D3 ;
+  border: none;
+  border-radius: 4px;
+}
+
+.reset {
+  background-color: #7DB54F;
+  border: 1px dotted #000000;
+}
+
+.hotel-found {
+  font: var(--font-heading-h2);
+  text-transform: uppercase;
+}
+
+.sorting,
+.sorting option {
+  color: #333333;
+}
+
+.inhabitation-card-title {
+  font: var(--font-subtitle-bold);
+}
+
+.inhabitation-name {
+  text-align: left;
+}
+
+.inhabitation-price {
+  text-align: right;
+}
+
+.inhabitation-card-button {
+  font: var(--font-header-button);
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #FFFFFF;
+  background-color: #756157;
+}
+
+.inhabitation-card-favorites-button {
+  color: #FFFFFF;
+  font: var(--font-header-button);
+  text-transform: uppercase;
+  background-color: #82B3D3;
+  border: none;
+}
+
+.interaction-buttons .selected {
+  background-color: #7DB54F;
+}
+
+.inhabitation-rating {
+  color: #333333;
+  font: var(--font-caption);
+  text-transform: uppercase;
+}
+
+.pagination-item .pagination-current {
+  font: var(--font-pagination);
+  color: #000000;
+  text-decoration: none;
+  background-color: #F2F2F2;
+}
+
+.pagination-link {
+  font: var(--font-pagination);
+  color: white;
+  text-decoration: none;
+  background-color: #82B3D3;
+}
+
+.pagination-item .hidden {
+  color: #000000;
+  font: var(--font-subtitle);
+  background-color: none;
+  text-decoration: none;
+}
+
+.subscribe-catalog h2 {
+  font: var(--font-heading-h2);
+  text-transform: uppercase;
+}
+
+.subscribe-catalog p {
+  font: var(--font-subtitle);
+  color: #333333;
+}
+
+.subscribe-form .button {
+  color: #FFFFFF;
+  background-color: #82B3D3; /*временое решение что бы видеть текст*/
+  font: var(--font-search-button);
+  text-transform: uppercase;
+  border: none;
+}
+
+.subscribe-catalog .field {
+  font: var(--font-body);
+}

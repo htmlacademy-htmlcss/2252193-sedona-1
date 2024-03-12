@@ -17,7 +17,7 @@
 :root {
   --font-heading-xlarge: 700 60px / 78px "PT Sans", sans-serif;
   --font-adress: 400 40px / 40px "PT Sans", sans-serif;
-  --font-heading-h2: 700 30px / 36px "PT Sans", sans-serif;
+  --font-heading: 700 30px / 36px "PT Sans", sans-serif;
   --font-title-bold: 700 24px / 28px "PT Sans", sans-serif;
   --font-subtitle-bold: 700 24px / 28px "PT Sans", sans-serif;
   --font-subtitle: 400 22px / 26px "PT Sans", sans-serif;
@@ -31,7 +31,15 @@
   --font-caption: 400 16px / 20px "PT Sans", sans-serif;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font: var(--font-body);
   color: #000000;
   background-color: #FFFFFF;
@@ -46,6 +54,28 @@ fieldset {
 }
 
 /*Pages*/
+.navigation-block {
+  display: flex;
+  width: 1080px;
+  margin: 0 auto;
+}
+
+.navigation-logo {
+  width: 140px;
+  margin-right: 30px;
+}
+
+.navigation-list {
+  width: 380px;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-user {
+  max-width: 300px;
+  margin-left: auto;
+}
+
 .navigation-link {
   font: var(--font-header);
   color: #000000;
@@ -59,7 +89,18 @@ fieldset {
   text-transform: uppercase;
 }
 
+.main-container {
+  flex-grow: 1;
+}
+
+.page-container {
+  width: 1080px;
+  margin: 0 auto;
+}
+
 .hero {
+  display: flex;
+  margin: 0 auto;
   width: 1200px;
   height: 485px;
   background-image: url("../images/index-background.jpg");
@@ -69,7 +110,7 @@ fieldset {
 
 /*Title */
 .advantages-title h2 {
-  font: var(--font-heading-h2);
+  font: var(--font-heading);
   text-transform: uppercase;
 }
 
@@ -82,23 +123,35 @@ fieldset {
   text-transform: uppercase;
 }
 
-.advantages .first,
-.advantages .last {
+.advantages-list {
+  width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.advantages-item {
+  width: 400px;
+}
+
+.advantages-item:nth-child(6n-5) {
   color: #FFFFFF;
   background-color: #82B3D3;
 }
 
-.advantages .second,
-.advantages .fourth {
+.advantages-item:nth-child(3n),
+.advantages-item:nth-child(5n) {
   background-color: #83B3D31F;
 }
 
-.advantages .third {
+.advantages-item:nth-child(4n) {
   background-color: #83B3D333;
 }
 
 .services h2 {
-  font: var(--font-heading-h2);
+  font: var(--font-heading);
   text-transform: uppercase;
 }
 
@@ -111,13 +164,25 @@ fieldset {
   text-transform: uppercase;
 }
 
-.services .first,
-.services .third {
+.services-list {
+  width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.services-item {
+  width: 400px;
+}
+
+.services-item:nth-child(odd) {
   background-color: #83B3D31F;
 }
 
 .search h2 {
-  font: var(--font-heading-h2);
+  font: var(--font-heading);
   text-transform: uppercase;
 }
 
@@ -142,7 +207,7 @@ fieldset {
 }
 
 .subscribe h2 {
-  font: var(--font-heading-h2);
+  font: var(--font-heading);
   text-transform: uppercase;
   color: #FFFFFF;
 }
@@ -157,7 +222,7 @@ fieldset {
 }
 
 .subscribe .button {
-  font: var(--font-heading-h2);
+  font: var(--font-heading);
   color: #FFFFFF;
   background-color: #82B3D3; /*временое решение что бы видеть текст*/
   text-transform: uppercase;
@@ -169,17 +234,41 @@ fieldset {
   text-decoration: none;
 }
 
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  width: 1060px;
+  margin: 0 auto;
+}
+
+.footer-social-list{
+  width: 160px;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-contacts {
+  width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.inner-header-title {
+  font: var(--font-heading-xlarge);
+}
+
 .selection-menu {
   width: 1200px;
   height: 412px;
+  margin: 0 auto;
   background-image: url("../images/filter.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
   color: #FFFFFF;
 }
 
-.inner-header-title {
-  font: var(--font-heading-xlarge);
+.breadcrumbs-list {
+  display: flex;
 }
 
 .breadcrumbs-link {
@@ -188,6 +277,20 @@ fieldset {
   text-decoration: none;
 }
 
+
+.catalog-filter {
+  display: flex;
+  flex-direction: row;
+}
+
+.catalog-filter-group {
+  width: 150px;
+}
+
+.catalog-filter-list {
+  margin: 0;
+  padding: 0;
+}
 
 .catalog-filter-title,
 .inhabitation-cost {
@@ -213,13 +316,32 @@ fieldset {
 }
 
 .hotel-found {
-  font: var(--font-heading-h2);
+  font: var(--font-heading);
   text-transform: uppercase;
 }
 
-.sorting,
-.sorting option {
+.sorting {
+  display: flex;
+  justify-content: space-between;
+  width: 1060px;
+  margin: 0 auto;
+}
+
+.display-option,
+.display-option option {
   color: #333333;
+}
+
+.display-type-list {
+  display: flex;
+  flex-direction: row;
+  align-content: flex-end;
+}
+
+.inhabitation-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .inhabitation-card-title {
@@ -260,6 +382,12 @@ fieldset {
   text-transform: uppercase;
 }
 
+.pagination {
+  display: flex;
+  flex-direction: row;S
+
+}
+
 .pagination-item .pagination-current {
   font: var(--font-pagination);
   color: #000000;
@@ -281,8 +409,13 @@ fieldset {
   text-decoration: none;
 }
 
+.subscribe-catalog {
+  width: 700px;
+  margin: 0 auto;
+}
+
 .subscribe-catalog h2 {
-  font: var(--font-heading-h2);
+  font: var(--font-heading);
   text-transform: uppercase;
 }
 

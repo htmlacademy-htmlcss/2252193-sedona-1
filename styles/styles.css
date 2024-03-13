@@ -36,9 +36,10 @@ html {
 }
 
 body {
-  margin: 0;
   display: flex;
   flex-direction: column;
+  width: 1200px;
+  margin: 0 auto;
   min-height: 100%;
   font: var(--font-body);
   color: #000000;
@@ -51,13 +52,13 @@ fieldset {
 
 .list-reset {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 /*Pages*/
-.navigation-block {
+.navigation-wrapper {
   display: flex;
-  width: 1080px;
-  margin: 0 auto;
 }
 
 .navigation-logo {
@@ -67,13 +68,12 @@ fieldset {
 
 .navigation-list {
   width: 380px;
-  margin: 0;
-  padding: 0;
 }
 
 .navigation-user {
   max-width: 300px;
   margin-left: auto;
+
 }
 
 .navigation-link {
@@ -94,14 +94,10 @@ fieldset {
 }
 
 .page-container {
-  width: 1080px;
-  margin: 0 auto;
 }
 
 .hero {
   display: flex;
-  margin: 0 auto;
-  width: 1200px;
   height: 485px;
   background-image: url("../images/index-background.jpg");
   background-size: 100% auto;
@@ -124,11 +120,8 @@ fieldset {
 }
 
 .advantages-list {
-  width: 1200px;
   display: flex;
   flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
   text-align: center;
 }
 
@@ -165,11 +158,8 @@ fieldset {
 }
 
 .services-list {
-  width: 1200px;
   display: flex;
   flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
   text-align: center;
 }
 
@@ -181,16 +171,16 @@ fieldset {
   background-color: #83B3D31F;
 }
 
-.search h2 {
+.search-wrapper h2 {
   font: var(--font-heading);
   text-transform: uppercase;
 }
 
-.search p {
+.search-wrapper p {
   font: var(--font-subtitle);
 }
 
-.search .button {
+.search-wrapper .button {
   font: var(--font-search-button);
   color: #FFFFFF;
   background-color: #756157; /*временое решение что бы видеть текст*/
@@ -198,30 +188,29 @@ fieldset {
   text-transform: uppercase;
 }
 
-.subscribe {
-  width: 1200px;
+.subscribe-wrapper {
   height: 415px;
   background-image: url("../images/subscribe.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
 }
 
-.subscribe h2 {
+.subscribe-wrapper h2 {
   font: var(--font-heading);
   text-transform: uppercase;
   color: #FFFFFF;
 }
 
-.subscribe p {
+.subscribe-wrapper p {
   font: var(--font-subtitle);
   color: #FFFFFF;
 }
 
-.subscribe .field {
+.subscribe-wrapper .field {
   font: var(--font-body);
 }
 
-.subscribe .button {
+.subscribe-wrapper .button {
   font: var(--font-heading);
   color: #FFFFFF;
   background-color: #82B3D3; /*временое решение что бы видеть текст*/
@@ -237,19 +226,13 @@ fieldset {
 .footer-container {
   display: flex;
   justify-content: space-between;
-  width: 1060px;
-  margin: 0 auto;
 }
 
 .footer-social-list{
   width: 160px;
-  margin: 0;
-  padding: 0;
 }
 
 .footer-contacts {
-  width: 720px;
-  margin: 0 auto;
   text-align: center;
 }
 
@@ -258,9 +241,7 @@ fieldset {
 }
 
 .selection-menu {
-  width: 1200px;
   height: 412px;
-  margin: 0 auto;
   background-image: url("../images/filter.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -277,24 +258,26 @@ fieldset {
   text-decoration: none;
 }
 
-
 .catalog-filter {
   display: flex;
-  flex-direction: row;
 }
 
 .catalog-filter-group {
   width: 150px;
 }
 
-.catalog-filter-list {
-  margin: 0;
-  padding: 0;
-}
-
 .catalog-filter-title,
 .inhabitation-cost {
   font: var(--font-header);
+}
+
+.button-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.cost-range-button {
+  width: 145px;
 }
 
 .accept,
@@ -311,8 +294,8 @@ fieldset {
 }
 
 .reset {
-  background-color: #7DB54F;
-  border: 1px dotted #000000;
+  background-color: unset;
+  border: transparent;
 }
 
 .hotel-found {
@@ -320,27 +303,23 @@ fieldset {
   text-transform: uppercase;
 }
 
-.sorting {
+.sorting-wrapper {
   display: flex;
   justify-content: space-between;
-  width: 1060px;
-  margin: 0 auto;
 }
 
-.display-option,
-.display-option option {
+.drop-down-list,
+.drop-down-list option {
   color: #333333;
 }
 
 .display-type-list {
   display: flex;
-  flex-direction: row;
   align-content: flex-end;
 }
 
 .inhabitation-list {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
 }
 
@@ -348,12 +327,7 @@ fieldset {
   font: var(--font-subtitle-bold);
 }
 
-.inhabitation-name {
-  text-align: left;
-}
-
 .inhabitation-price {
-  text-align: right;
 }
 
 .inhabitation-card-button {
@@ -384,8 +358,6 @@ fieldset {
 
 .pagination {
   display: flex;
-  flex-direction: row;S
-
 }
 
 .pagination-item .pagination-current {
@@ -405,13 +377,7 @@ fieldset {
 .pagination-item .hidden {
   color: #000000;
   font: var(--font-subtitle);
-  background-color: none;
   text-decoration: none;
-}
-
-.subscribe-catalog {
-  width: 700px;
-  margin: 0 auto;
 }
 
 .subscribe-catalog h2 {

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
-      xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Catalog</title>
@@ -8,7 +7,7 @@
 </head>
 <body>
     <header class="page-header">
-        <div class="navigation-block">
+        <div class="navigation-wrapper">
             <a class="navigation-logo" href="index.html">
               <img class="page-header-logo" src="images/logo.svg" width="140" height="70" alt="Логотип городка 'Седона'.">
             </a>
@@ -44,8 +43,8 @@
     <main class="main-container main-inner">
         <div class="page-container">
             <div class="selection-menu">
+                <h1 class="inner-header-title">Гостиницы Седоны</h1>
                 <nav class="breadcrumbs">
-                    <h1 class="inner-header-title">Гостиницы Седоны</h1>
                     <ol class="breadcrumbs-list list-reset">
                         <li class="breadcrumbs-item">
                             <a class="breadcrumbs-link" href="index.html">
@@ -53,16 +52,12 @@
                           </a>
                         </li>
                         <li>
-                          <!--далее ВСТАВИТЬ ИМДЖ-->
-                        </li>
-                        <li>
                             <a class="breadcrumbs-link">Гостиницы</a>
                         </li>
                     </ol>
                 </nav>
 
-
-                <div class="catalog-products">
+                <div class="catalog-container">
                     <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
                         <fieldset class="catalog-filter-group">
                             <legend class="catalog-filter-title">Инфраструктура:</legend>
@@ -114,9 +109,11 @@
 
                         <fieldset class="inhabitation-cost">
                             <label class="form-label" for="inhabitation-cost-range">Стоимость, ₽:</label>
-                            <input type="number" id="inhabitation-cost-from" name="inhabitation-cost-from" min="0" max="12000" value="0" step="any" placeholder="от">
-                            <input type="number" id="inhabitation-cost-to" name="inhabitation-cost-to" min="0" max="12000" value="9000" step="any" placeholder="до">
-                            <input type="range" id="inhabitation-cost-range" name="inhabitation-cost-range" min="0" max="12000" value="9000" step="any" placeholder="до">
+                                <div class="cost-range-wrapper">
+                                    <input class="cost-range-button" type="number" id="inhabitation-cost-from" name="inhabitation-cost-from" min="0" max="12000" value="0" step="any" placeholder="от">
+                                    <input class="cost-range-button" type="number" id="inhabitation-cost-to" name="inhabitation-cost-to" min="0" max="12000" value="9000" step="any" placeholder="до">
+                                </div>
+                                <input type="range" id="inhabitation-cost-range" name="inhabitation-cost-range" min="0" max="12000" value="9000" step="any" placeholder="до">
                         </fieldset>
 
                         <div class="button-list">
@@ -127,10 +124,10 @@
                 </div>
             </div>
 
-            <div class="filter-result">
-                <div class="sorting">
+            <div class="result-container">
+                <div class="sorting-wrapper">
                     <h2 class="hotel-found">Найдено гостинец: 38</h2>
-                    <select class="display-option" aria-label="Сортировка">
+                    <select class="drop-down-list" aria-label="Сортировка">
                         <option value="cheap">Сначала дешевые</option>
                         <option value="expensive">Сначала дорогие</option>
                         <option value="popular">Сначала популярные</option>
@@ -157,63 +154,79 @@
 
                 <section class="results">
                     <ul class="inhabitation-list list-reset">
-                        <li class="inhabitation-card">
-                            <article>
+                        <li class="inhabitation-item">
+                            <article class="inhabitation-card">
                                 <img class="inhabitation-card-image" src="images/hotel-1.jpg" width="300" height="212" alt="Виды отеля Amara Resort & Spa">
                                 <h3 class="inhabitation-card-title">Amara Resort & Spa</h3>
-                                <span class="inhabitation-name">Гостиница</span>
-                                <span class="inhabitation-price">от 4000 ₽</span>
+                                <div class="cost-wrapper">
+                                    <span class="inhabitation-name">Гостиница</span>
+                                    <span class="inhabitation-price">от 4000 ₽</span>
+                                </div>
                                 <div class="interaction-buttons">
                                     <a class="inhabitation-card-button button" href="#">Подробнее</a>
                                     <button class="inhabitation-card-favorites-button" type="button">В избранное</button>
                                 </div>
-                                <img class="rating" src="#" alt="4 звезды">
-                                <span class="inhabitation-rating">Рейтинг: 8,5</span>
+                                <div class="rating-wrapper">
+                                    <img class="rating" src="#" alt="4 звезды">
+                                    <span class="inhabitation-rating">Рейтинг: 8,5</span>
+                                </div>
                             </article>
                         </li>
 
-                        <li class="inhabitation-card">
-                            <article>
+                        <li class="inhabitation-item">
+                            <article class="inhabitation-card">
                                 <img class="inhabitation-card-image" src="images/hotel-2.jpg" width="300" height="212" alt="Виды отеля Villas at Poco Diablo">
                                 <h3 class="inhabitation-card-title">Villas at Poco Diablo</h3>
-                                <span class="inhabitation-name">Гостиница</span>
-                                <span class="inhabitation-price">от 5000 ₽</span>
+                                <div class="cost-wrapper">
+                                    <span class="inhabitation-name">Гостиница</span>
+                                    <span class="inhabitation-price">от 5000 ₽</span>
+                                </div>
                                 <div class="interaction-buttons">
                                     <a class="inhabitation-card-button button" href="#">Подробнее</a>
-                                  <button class="inhabitation-card-favorites-button selected" type="button">В избранном</button> <!-- или  тип submit? -->
+                                    <button class="inhabitation-card-favorites-button selected" type="button">В избранном</button> <!-- или  тип submit? -->
                                 </div>
-                                <img class="rating" src="#" alt="4 звезды">
-                                <span class="inhabitation-rating">Рейтинг: 9,2</span>
+                                <div class="rating-wrapper">
+                                    <img class="rating" src="#" alt="4 звезды">
+                                    <span class="inhabitation-rating">Рейтинг: 9,2</span>
+                                </div>
                             </article>
                         </li>
 
-                        <li class="inhabitation-card">
-                            <article>
+                        <li class="inhabitation-item">
+                            <article class="inhabitation-card">
                                 <img class="inhabitation-card-image" src="images/hotel-3.jpg" width="300" height="212" alt="Виды отеля Desert Quail Inn">
                                 <h3 class="inhabitation-card-title">Desert Quail Inn</h3>
-                                <span class="inhabitation-name">Гостиница</span>
-                                <span class="inhabitation-price">от 2500 ₽</span>
+                                <div class="cost-wrapper">
+                                    <span class="inhabitation-name">Гостиница</span>
+                                    <span class="inhabitation-price">от 2500 ₽</span>
+                                </div>
                                 <div class="interaction-buttons">
                                     <a class="inhabitation-card-button button" href="#">Подробнее</a>
                                     <button class="inhabitation-card-favorites-button" type="button">В избранное</button>
                                 </div>
-                                <img class="rating" src="#" alt="3 звезды">
-                                <span class="inhabitation-rating">Рейтинг: 6,9</span>
+                                <div class="rating-wrapper">
+                                    <img class="rating" src="#" alt="3 звезды">
+                                    <span class="inhabitation-rating">Рейтинг: 6,9</span>
+                                </div>
                             </article>
                         </li>
 
-                        <li class="inhabitation-card">
-                            <article>
+                        <li class="inhabitation-item">
+                            <article class="inhabitation-card">
                                 <img class="inhabitation-card-image" src="images/hotel-4.jpg" width="300" height="212" alt="Виды отеля GreenTree Inn">
                                 <h3 class="inhabitation-card-title">GreenTree Inn</h3>
-                                <span class="inhabitation-name">Гостиница</span>
-                                <span class="inhabitation-price">от 1500 ₽</span>
+                                <div class="cost-wrapper">
+                                    <span class="inhabitation-name">Гостиница</span>
+                                    <span class="inhabitation-price">от 1500 ₽</span>
+                                </div>
                                 <div class="interaction-buttons">
                                     <a class="inhabitation-card-button button" href="#">Подробнее</a>
                                   <button class="inhabitation-card-favorites-button" type="button">В избранное</button>
                                 </div>
-                                <img class="rating" src="#" alt="2 звезды">
-                                <span class="inhabitation-rating">Рейтинг: 5,0</span>
+                                <div class="rating-wrapper">
+                                    <img class="rating" src="#" alt="2 звезды">
+                                    <span class="inhabitation-rating">Рейтинг: 5,0</span>
+                                </div>
                             </article>
                         </li>
                     </ul>
@@ -255,7 +268,7 @@
 
     <footer class="page-footer">
         <div class="footer-container">
-            <ul class="footer-social-list">
+            <ul class="footer-social-list list-reset">
                 <li class="footer-social-item">
                     <a class="button" href="https://vk.com/htmlacademy">
                         <span class="visually-hidden">ВКонтакте</span>

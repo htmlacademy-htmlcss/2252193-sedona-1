@@ -68,7 +68,6 @@ fieldset {
 }
 
 .navigation-list {
-  width: 380px;
 }
 
 .navigation-user {
@@ -106,17 +105,28 @@ fieldset {
 
 /*Title */
 .advantages-title h2 {
+  margin: 0;
+  padding: 0;
   font: var(--font-heading);
   text-transform: uppercase;
 }
 
 .advantages-title p {
   font: var(--font-subtitle);
+  margin: 0;
+  padding: 0;
 }
 
 .advantages-heading {
+  margin: 0;
+  padding: 0;
   font: var(--font-title-bold);
   text-transform: uppercase;
+}
+
+.advantages-description {
+  margin: 0;
+  padding: 0;
 }
 
 .advantages-list {
@@ -144,17 +154,28 @@ fieldset {
 }
 
 .services h2 {
+  margin: 0;
+  padding: 0;
   font: var(--font-heading);
   text-transform: uppercase;
 }
 
-.services .reason {
+.reason {
+  margin: 0;
+  padding: 0;
   font: var(--font-subtitle);
 }
 
 .services-title {
+  margin: 0;
+  padding: 0;
   font: var(--font-title-bold);
   text-transform: uppercase;
+}
+
+.services-description {
+  margin: 0;
+  padding: 0;
 }
 
 .services-list {
@@ -172,15 +193,21 @@ fieldset {
 }
 
 .search-wrapper h2 {
+  margin: 0;
+  padding: 0;
   font: var(--font-heading);
   text-transform: uppercase;
 }
 
 .search-wrapper p {
+  margin: 0;
+  padding: 0;
   font: var(--font-subtitle);
 }
 
 .search-wrapper .button {
+  margin: 0;
+  padding: 0;
   font: var(--font-search-button);
   color: #FFFFFF;
   background-color: #756157; /*временое решение что бы видеть текст*/
@@ -196,12 +223,16 @@ fieldset {
 }
 
 .subscribe-wrapper h2 {
+  margin: 0;
+  padding: 0;
   font: var(--font-heading);
   text-transform: uppercase;
   color: #FFFFFF;
 }
 
 .subscribe-wrapper p {
+  margin: 0;
+  padding: 0;
   font: var(--font-subtitle);
   color: #FFFFFF;
 }
@@ -237,6 +268,8 @@ fieldset {
 }
 
 .inner-header-title {
+  margin: 0;
+  padding: 0;
   font: var(--font-heading-xlarge);
 }
 
@@ -298,14 +331,16 @@ fieldset {
   border: transparent;
 }
 
-.hotel-found {
-  font: var(--font-heading);
-  text-transform: uppercase;
-}
-
 .sorting-wrapper {
   display: flex;
   justify-content: space-between;
+}
+
+.hotel-found {
+  margin: 0;
+  padding: 0;
+  font: var(--font-heading);
+  text-transform: uppercase;
 }
 
 .drop-down-list,
@@ -324,6 +359,8 @@ fieldset {
 }
 
 .inhabitation-card-title {
+  margin: 0;
+  padding: 0;
   font: var(--font-subtitle-bold);
 }
 
@@ -381,16 +418,22 @@ fieldset {
 }
 
 .subscribe-catalog h2 {
+  margin: 0;
+  padding: 0;
   font: var(--font-heading);
   text-transform: uppercase;
 }
 
 .subscribe-catalog p {
+  margin: 0;
+  padding: 0;
   font: var(--font-subtitle);
   color: #333333;
 }
 
 .subscribe-form .button {
+  margin: 0;
+  padding: 0;
   color: #FFFFFF;
   background-color: #82B3D3; /*временое решение что бы видеть текст*/
   font: var(--font-search-button);

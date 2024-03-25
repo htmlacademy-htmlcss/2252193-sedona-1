@@ -78,8 +78,25 @@ fieldset {
 }
 
 /*Pages*/
+/*Header*/
 .navigation-wrapper {
   display: flex;
+  width: 1070px;
+  margin: 0 auto;
+  max-height: 65px;
+}
+
+.navigation-list{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.navigation-link {
+  display: block;
+  padding: 20px 16px;
+  font: var(--font-header);
+  color: #000000;
+  text-decoration: none;
 }
 
 .navigation-logo {
@@ -87,47 +104,64 @@ fieldset {
   margin-right: 30px;
 }
 
+.navigation-user .navigation-link {
+  min-width: 20px;
+  min-height: 25px;
+}
+
 .navigation-user {
   max-width: 300px;
   margin-left: auto;
 }
 
-.navigation-link {
-  font: var(--font-header);
-  color: #000000;
-  text-decoration: none;
-}
-
 .navigation-list .button {
+  min-height: 36px;
+  padding: 8px 50px;
   color: #FFFFFF;
-  background-color: #756157; /*временое решение что бы видеть текст*/
+  background-color: #756157;
   font: var(--font-header-button);
   text-transform: uppercase;
 }
 
+/*Main page*/
 .main-container {
   flex-grow: 1;
+}
+
+/*Title */
+.caption {
+  margin: 0 auto;
+  padding-top: 50px;
+  margin-bottom: 83px;
 }
 
 .hero {
   display: flex;
   height: 485px;
+  margin-bottom: 69px;
   background-image: url("../images/index-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
 }
 
-/*Title */
+/*Advantages*/
+.advantages-title {
+  text-align: center;
+}
+
 .advantages-title h2 {
   font: var(--font-heading);
   text-transform: uppercase;
+  padding-bottom: 25px;
 }
 
 .advantages-title p {
   font: var(--font-subtitle);
+  margin-bottom: 69px;
 }
 
 .advantages-heading {
+  padding-bottom: 62px;
   font: var(--font-title-bold);
   text-transform: uppercase;
 }
@@ -139,7 +173,8 @@ fieldset {
 }
 
 .advantages-item {
-  width: 400px;
+  width: 230px;
+  padding: 100px 85px;
 }
 
 .advantages-item:nth-child(6n-5) {
@@ -156,18 +191,19 @@ fieldset {
   background-color: #83B3D333;
 }
 
+/*Services*/
 .services h2 {
   font: var(--font-heading);
   text-transform: uppercase;
+  text-align: center;
+  padding-top: 64px;
+  margin-bottom: 20px;
 }
 
 .reason {
   font: var(--font-subtitle);
-}
-
-.services-title {
-  font: var(--font-title-bold);
-  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 64px;
 }
 
 .services-list {
@@ -177,30 +213,51 @@ fieldset {
 }
 
 .services-item {
-  width: 400px;
+  max-width: 230px;
+  padding: 80px 85px;
+}
+
+.services-title {
+  font: var(--font-title-bold);
+  text-transform: uppercase;
+  padding-top: 101px; /* после вставки картинки padding 30px */
+  margin-bottom: 30px;
 }
 
 .services-item:nth-child(odd) {
   background-color: #83B3D31F;
 }
 
+/*Search*/
+.search-wrapper {
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 96px;
+}
+
 .search-wrapper h2 {
   font: var(--font-heading);
   text-transform: uppercase;
+  padding-top: 96px;
+  margin-bottom: 20px;
 }
 
 .search-wrapper p {
   font: var(--font-subtitle);
+  margin-bottom: 54px;
 }
 
 .search-wrapper .button {
+  padding: 13px 50px 13px 50px;
   font: var(--font-search-button);
   color: #FFFFFF;
-  background-color: #756157; /*временое решение что бы видеть текст*/
+  background-color: #756157;
   text-decoration: none;
   text-transform: uppercase;
 }
 
+/*Subscribe*/
 .subscribe-wrapper {
   height: 415px;
   background-image: url("../images/subscribe.jpg");
@@ -208,51 +265,81 @@ fieldset {
   background-repeat: no-repeat;
 }
 
+.subscribe-block {
+  margin: 0 auto;
+  padding-top: 100px;
+  margin-bottom: 100px;
+  width: 690px;
+  text-align: center;
+}
+
 .subscribe-wrapper h2 {
   font: var(--font-heading);
   text-transform: uppercase;
   color: #FFFFFF;
+  margin-bottom: 20px;
 }
 
 .subscribe-wrapper p {
+  margin-bottom: 54px;
   font: var(--font-subtitle);
   color: #FFFFFF;
 }
 
 .subscribe-wrapper .field {
   font: var(--font-body);
+  width: 408px;
+  padding: 12px 20px;
 }
 
 .subscribe-wrapper .button {
-  font: var(--font-heading);
+  width: 232px;
+  padding: 8px 0 8px;
+  font: var(--font-search-button);
   color: #FFFFFF;
-  background-color: #82B3D3; /*временое решение что бы видеть текст*/
+  background-color: #82B3D3;
   text-transform: uppercase;
+  border: none;
 }
 
-.footer-contacts-phone {
-  font-style: normal;
-  font: var(--font-adress);
-  text-decoration: none;
-}
-
+/*Footer */
 .footer-container {
   display: flex;
   justify-content: space-between;
+  width: 1060px;
+  margin: 0 auto;
+  padding-top: 40px;
+  margin-bottom: 30px;
 }
 
 .footer-social-list{
   width: 160px;
 }
 
+.footer-social-item .a {
+  display: flex;
+  flex-wrap: wrap;
+  width: 48px;
+  height: 40px;
+}
+
 .footer-contacts {
   text-align: center;
 }
 
-.inner-header-title {
-  font: var(--font-heading-xlarge);
+.footer-contacts-phone {
+  font-style: normal;
+  font: var(--font-adress);
+  text-decoration: none;
+
 }
 
+.logo-HTML-academy {
+  height: 34px;
+  padding: 8px 0 8px;
+}
+
+/*Catalog*/
 .selection-menu {
   height: 412px;
   background-image: url("../images/filter.jpg");
@@ -261,16 +348,27 @@ fieldset {
   color: #FFFFFF;
 }
 
+.inner-header-title {
+  font: var(--font-heading-xlarge);
+  padding-top: 35px;
+  padding-left: 70px;
+  margin-bottom: 8px;
+}
+
+/*Breadcrumbs*/
 .breadcrumbs-list {
   display: flex;
+  padding-left: 70px;
 }
 
 .breadcrumbs-link {
   font: var(--font-caption);
+  margin-right: 30px;
   color: inherit;
   text-decoration: none;
 }
 
+/*Filter*/
 .catalog-filter {
   display: flex;
 }
@@ -311,14 +409,19 @@ fieldset {
   border: transparent;
 }
 
+/*Sorting*/
 .sorting-wrapper {
   display: flex;
   justify-content: space-between;
+  margin: 0 70px 40px 70px;
+  padding-top: 50px;
+  width: 1060px;
 }
 
 .hotel-found {
   font: var(--font-heading);
   text-transform: uppercase;
+  padding: 7px;
 }
 
 .drop-down-list,
@@ -331,9 +434,15 @@ fieldset {
   align-content: flex-end;
 }
 
+.display-type-list .button {
+  width: 50px;
+  height: 50px;
+}
+
+/*Hotels*/
 .inhabitation-list {
-  display: flex;
-  flex-wrap: wrap;
+  /*display: flex;
+  flex-wrap: wrap;*/
 }
 
 .inhabitation-card-title {
@@ -366,8 +475,11 @@ fieldset {
   text-transform: uppercase;
 }
 
+/*Pagination*/
 .pagination {
   display: flex;
+  padding-top: 80px;
+  margin-bottom: 60px;
 }
 
 .pagination-item .pagination-current {
@@ -377,37 +489,68 @@ fieldset {
   background-color: #F2F2F2;
 }
 
+.pagination-item:not(:last-child) {
+  margin-right: 8px;
+}
+
 .pagination-link {
+  display: block;
+  width: 60px;
+  height: 60px;
   font: var(--font-pagination);
-  color: white;
+  color: #FFFFFF;
   text-decoration: none;
   background-color: #82B3D3;
 }
 
-.pagination-item .hidden {
-  color: #000000;
+.pagination-more-pages {
+  display: block;
+  width: 60px;
+  height: 60px;
   font: var(--font-subtitle);
+  color: #000000;
   text-decoration: none;
+  background-color: #FFFFFF;
+}
+
+/*Subscribe*/
+.subscribe-catalog {
+  margin: 0 auto;
+  padding-top: 100px;
+  margin-bottom: 100px;
+  width: 690px;
+  text-align: center;
 }
 
 .subscribe-catalog h2 {
   font: var(--font-heading);
   text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
 .subscribe-catalog p {
   font: var(--font-subtitle);
   color: #333333;
+  margin-bottom: 54px;
+}
+
+.subscribe-form {
+  display: flex;
+  margin: 0 auto;
 }
 
 .subscribe-form .button {
-  color: #FFFFFF;
-  background-color: #82B3D3; /*временое решение что бы видеть текст*/
+  width: 232px;
+  padding: 8px 0 8px;
   font: var(--font-search-button);
+  color: #FFFFFF;
+  background-color: #82B3D3;
   text-transform: uppercase;
   border: none;
 }
 
 .subscribe-catalog .field {
   font: var(--font-body);
+  width: 408px;
+  padding: 12px 20px;
 }

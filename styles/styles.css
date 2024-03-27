@@ -77,6 +77,11 @@ fieldset {
   padding: 0;
 }
 
+.button {
+  border: none;
+  text-transform: uppercase;
+}
+
 /*Pages*/
 /*Header*/
 .navigation-wrapper {
@@ -123,8 +128,6 @@ fieldset {
   color: #FFFFFF;
   background-color: #756157;
   font: var(--font-header-button);
-  text-transform: uppercase;
-  border: none;
   border-radius: 4px;
 }
 
@@ -135,15 +138,14 @@ fieldset {
 
 /*Title */
 .caption {
-  margin: 0 auto;
-  margin-top: 50px;
-  margin-bottom: 83px;
+margin: 0 auto;
 }
 
 .hero {
   display: flex;
-  height: 485px;
   margin-bottom: 69px;
+  padding-top: 50px;
+  padding-bottom: 83px;
   background-image: url("../images/index-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -151,8 +153,9 @@ fieldset {
 
 /*Advantages*/
 .advantages-title {
+  margin: 0 auto;
+  padding-bottom: 69px;
   text-align: center;
-  margin-bottom: 69px;
 }
 
 .advantages-title h2 {
@@ -199,14 +202,13 @@ fieldset {
 /*Services*/
 .services-wrapper {
   margin: 0 auto;
+  padding: 64px 0;
   text-align: center;
-  margin-bottom: 64px;
 }
 
 .services h2 {
   font: var(--font-heading);
   text-transform: uppercase;
-  padding-top: 64px;
   margin-bottom: 20px;
 }
 
@@ -237,16 +239,14 @@ fieldset {
 
 /*Search*/
 .search-wrapper {
-  width: 600px;
   margin: 0 auto;
   text-align: center;
-  margin-bottom: 96px;
+  padding: 96px 0;
 }
 
 .search-wrapper h2 {
   font: var(--font-heading);
   text-transform: uppercase;
-  padding-top: 96px;
   margin-bottom: 20px;
 }
 
@@ -264,21 +264,19 @@ fieldset {
   color: #FFFFFF;
   background-color: #756157;
   text-decoration: none;
-  text-transform: uppercase;
 }
 
 /*Subscribe*/
 .subscribe-wrapper {
-  height: 415px;
   background-image: url("../images/subscribe.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
+  padding: 96px 0;
+  margin: 0 auto;
 }
 
 .subscribe-block {
   margin: 0 auto;
-  padding-top: 100px;
-  margin-bottom: 100px;
   width: 690px;
   text-align: center;
 }
@@ -296,6 +294,10 @@ fieldset {
   color: #FFFFFF;
 }
 
+.subscribe-form {
+  display: flex;
+}
+
 .subscribe-wrapper .field {
   font: var(--font-body);
   width: 408px;
@@ -308,18 +310,18 @@ fieldset {
   font: var(--font-search-button);
   color: #FFFFFF;
   background-color: #82B3D3;
-  text-transform: uppercase;
-  border: none;
 }
 
 /*Footer */
+.page-footer {
+  padding: 40px 0 30px 0;
+}
+
 .footer-container {
   display: flex;
   justify-content: space-between;
   width: 1060px;
   margin: 0 auto;
-  padding-top: 40px;
-  margin-bottom: 30px;
 }
 
 .footer-social-list{
@@ -330,7 +332,7 @@ fieldset {
   display: flex;
   flex-wrap: wrap;
   width: 48px;
-  height: 40px;
+  /*height: 40px;*/
 }
 
 .footer-contacts {
@@ -343,9 +345,9 @@ fieldset {
   text-decoration: none;
 }
 
-.logo-HTML-academy {
-  height: 34px;
-}
+/*.logo-HTML-academy {*/
+/*  height: 34px;*/
+/*}*/
 
 /*Catalog*/
 .selection-menu {
@@ -421,8 +423,8 @@ fieldset {
 .sorting-wrapper {
   display: flex;
   justify-content: space-between;
-  margin: 0 70px 40px 70px;
-  padding-top: 50px;
+  margin: 0 auto;
+  padding: 50px 0 40px;
   width: 1060px;
 }
 
@@ -459,7 +461,6 @@ fieldset {
 
 .inhabitation-card-button {
   font: var(--font-header-button);
-  text-transform: uppercase;
   text-decoration: none;
   color: #FFFFFF;
   background-color: #756157;
@@ -468,9 +469,7 @@ fieldset {
 .inhabitation-card-favorites-button {
   color: #FFFFFF;
   font: var(--font-header-button);
-  text-transform: uppercase;
   background-color: #82B3D3;
-  border: none;
 }
 
 .interaction-buttons .selected {
@@ -524,10 +523,12 @@ fieldset {
 /*Subscribe*/
 .subscribe-catalog {
   margin: 0 auto;
-  padding-top: 100px;
-  margin-bottom: 100px;
-  width: 690px;
+  /*width: 690px;*/
   text-align: center;
+}
+.subscribe-catalog-wrapper {
+  margin: 0 auto;
+  padding: 100px 0;
 }
 
 .subscribe-catalog h2 {
@@ -542,19 +543,17 @@ fieldset {
   margin-bottom: 54px;
 }
 
-.subscribe-form {
+.subscribe-form-catalog {
   display: flex;
-  margin: 0 auto;
+  margin: 0 258px;
 }
 
-.subscribe-form .button {
+.subscribe-form-catalog .button {
   width: 232px;
   padding: 8px 0 8px;
   font: var(--font-search-button);
   color: #FFFFFF;
   background-color: #82B3D3;
-  text-transform: uppercase;
-  border: none;
 }
 
 .subscribe-catalog .field {
@@ -562,3 +561,4 @@ fieldset {
   width: 408px;
   padding: 12px 20px;
 }
+

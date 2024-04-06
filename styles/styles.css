@@ -58,6 +58,10 @@ body {
   overflow: hidden;
 }
 
+* {
+  box-sizing: border-box
+}
+
 h1,
 h2,
 h3,
@@ -143,7 +147,6 @@ margin: 0 auto;
 
 .hero {
   display: flex;
-  margin-bottom: 69px;
   padding-top: 50px;
   padding-bottom: 83px;
   background-image: url("../images/index-background.jpg");
@@ -154,7 +157,8 @@ margin: 0 auto;
 /*Advantages*/
 .advantages-title {
   margin: 0 auto;
-  padding-bottom: 69px;
+  padding-top: 69px;
+  margin-bottom: 69px;
   text-align: center;
 }
 
@@ -360,9 +364,7 @@ margin: 0 auto;
 
 .inner-header-title {
   font: var(--font-heading-xlarge);
-  padding-top: 35px;
-  padding-left: 70px;
-  margin-bottom: 8px;
+  padding: 35px 0 8px 70px;
 }
 
 /*Breadcrumbs*/
@@ -450,6 +452,10 @@ margin: 0 auto;
 }
 
 /*Hotels*/
+.results {
+  margin-bottom: 80px;
+}
+
 .inhabitation-list {
   /*display: flex;
   flex-wrap: wrap;*/
@@ -485,7 +491,6 @@ margin: 0 auto;
 /*Pagination*/
 .pagination {
   display: flex;
-  padding-top: 80px;
   margin-bottom: 60px;
 }
 

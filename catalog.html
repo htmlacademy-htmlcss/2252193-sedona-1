@@ -49,7 +49,7 @@
                         <li class="breadcrumbs-item">
                             <a class="breadcrumbs-link" href="index.html">
                                 <span class="visually-hidden">Главная</span>
-                          </a>
+                            </a>
                         </li>
                         <li>
                             <a class="breadcrumbs-link">Гостиницы</a>
@@ -59,66 +59,70 @@
 
                 <div class="catalog-container">
                     <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
-                        <fieldset class="catalog-filter-group">
-                            <legend class="catalog-filter-title">Инфраструктура:</legend>
-                            <ul class="catalog-filter-list list-reset">
-                                <li class="catalog-filter-item">
-                                    <label class="control">
-                                        <input class="control-input" type="checkbox" name="pool" checked>
-                                      Бассейн
-                                    </label>
-                                </li>
-                                <li class="catalog-filter-item">
-                                    <label class="control">
-                                        <input class="control-input" type="checkbox" name="parking" checked>
-                                      Парковка
-                                    </label>
-                                </li>
-                                <li class="catalog-filter-item">
-                                    <label class="control">
-                                        <input class="control-input" type="checkbox" name="wi-fi">
-                                      Wi-fi
-                                    </label>
-                                </li>
-                            </ul>
-                        </fieldset>
+                        <div class="catalog-filter-wrapper">
+                            <fieldset class="catalog-filter-group">
+                                <legend class="catalog-filter-title">Инфраструктура:</legend>
+                                <ul class="catalog-filter-list list-reset">
+                                    <li class="catalog-filter-item">
+                                        <label class="control">
+                                            <input class="control-input" type="checkbox" name="infrastructure-group" value="pool" checked>
+                                          Бассейн
+                                        </label>
+                                    </li>
+                                    <li class="catalog-filter-item">
+                                        <label class="control">
+                                            <input class="control-input" type="checkbox" name="infrastructure-group" value="parking" checked>
+                                          Парковка
+                                        </label>
+                                    </li>
+                                    <li class="catalog-filter-item">
+                                        <label class="control">
+                                            <input class="control-input" type="checkbox" name="infrastructure-group" value="wi-fi">
+                                          Wi-fi
+                                        </label>
+                                    </li>
+                                </ul>
+                            </fieldset>
 
-                        <fieldset class="catalog-filter-group">
-                            <legend class="catalog-filter-title">Тип Жилья:</legend>
-                            <ul class="catalog-filter-list list-reset">
-                                <li class="catalog-filter-item">
-                                    <label class="control">
-                                        <input class="control-input" type="radio" name="inhabitation-group" value="hotel" checked>
-                                      Гостиница
-                                    </label>
-                                </li>
-                                <li class="catalog-filter-item">
-                                    <label class="control">
-                                        <input class="control-input" type="radio" name="inhabitation-group" value="motel" >
-                                      Мотель
-                                    </label>
-                                </li>
-                                <li class="catalog-filter-item">
-                                    <label class="control">
-                                        <input class="control-input" type="radio" name="inhabitation-group" value="apartments">
-                                      Апартаменты
-                                    </label>
-                                </li>
-                            </ul>
-                        </fieldset>
+                            <fieldset class="catalog-filter-group">
+                                <legend class="catalog-filter-title">Тип Жилья:</legend>
+                                <ul class="catalog-filter-list list-reset">
+                                    <li class="catalog-filter-item">
+                                        <label class="control">
+                                            <input class="control-input" type="radio" name="inhabitation-group" value="hotel" checked>
+                                          Гостиница
+                                        </label>
+                                    </li>
+                                    <li class="catalog-filter-item">
+                                        <label class="control">
+                                            <input class="control-input" type="radio" name="inhabitation-group" value="motel" >
+                                          Мотель
+                                        </label>
+                                    </li>
+                                    <li class="catalog-filter-item">
+                                        <label class="control">
+                                            <input class="control-input" type="radio" name="inhabitation-group" value="apartments">
+                                          Апартаменты
+                                        </label>
+                                    </li>
+                                </ul>
+                            </fieldset>
+                        </div>
 
-                        <fieldset class="inhabitation-cost">
-                            <label class="form-label" for="inhabitation-cost-range">Стоимость, ₽:</label>
+                        <div class="cost-range-container">
+                            <fieldset class="inhabitation-cost">
+                                <label class="form-label catalog-filter-title" for="inhabitation-cost-range">Стоимость, ₽:</label>
                                 <div class="cost-range-wrapper">
                                     <input class="cost-range-button" type="number" id="inhabitation-cost-from" name="inhabitation-cost-from" min="0" max="12000" value="0" step="any" placeholder="от">
                                     <input class="cost-range-button" type="number" id="inhabitation-cost-to" name="inhabitation-cost-to" min="0" max="12000" value="9000" step="any" placeholder="до">
                                 </div>
-                                <input type="range" id="inhabitation-cost-range" name="inhabitation-cost-range" min="0" max="12000" value="9000" step="any" placeholder="до">
-                        </fieldset>
+                                <input class="range-line" type="range" id="inhabitation-cost-range" name="inhabitation-cost-range" min="0" max="12000" value="9000" step="any" placeholder="до">
+                            </fieldset>
 
-                        <div class="button-list">
-                            <button class="button accept" type="submit">Применить</button>
-                            <button class="button reset" type="reset">Сбросить</button>
+                            <div class="form-actions-wrapper">
+                                <button class="button apply-button" type="submit">Применить</button>
+                                <button class="button reset-button" type="reset">Сбросить</button>
+                            </div>
                         </div>
                     </form>
                 </div>

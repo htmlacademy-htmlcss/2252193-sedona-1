@@ -144,12 +144,13 @@ fieldset {
 /*Title */
 .caption {
   margin: 0 auto;
+  min-height: 352px;
 }
 
 .hero {
   display: flex;
-  padding-top: 50px;
-  padding-bottom: 83px;
+  padding-top: 65px;
+  padding-bottom: 65px;
   background-image: url("../images/index-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -177,20 +178,42 @@ fieldset {
 }
 
 .advantages-heading {
-  margin-bottom: 62px;
   font: var(--font-title-bold);
   text-transform: uppercase;
 }
 
 .advantages-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 400px);
   text-align: center;
 }
 
 .advantages-item {
-  width: 230px;
-  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 62px;
+  justify-content: center;
+  align-content: center;
+  padding: 10px 80px;
+  height: 385px;
+}
+
+.advantages-item:nth-child(-4n+6) {
+  padding: 0;
+}
+
+.advantages-photo {
+  max-height: 385px;
+}
+
+.advantages-item:nth-child(2) {
+  grid-column: 2 / 4;
+  grid-row: 1 / 2;
+}
+
+.advantages-item:nth-child(6) {
+  grid-column: 1 / 3;
+  grid-row: 3 / 4;
 }
 
 .advantages-item:nth-child(6n-5) {
@@ -229,20 +252,23 @@ fieldset {
 }
 
 .services-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 400px);
   text-align: center;
 }
 
 .services-item {
-  max-width: 230px;
-  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-content: center;
+  padding: 80px;
 }
 
 .services-title {
   font: var(--font-title-bold);
   text-transform: uppercase;
-  margin-bottom: 30px;
 }
 
 .services-item:nth-child(odd) {
@@ -253,8 +279,7 @@ fieldset {
 .search-wrapper {
   margin: 0 auto;
   text-align: center;
-  padding-top: 96px;
-  margin-bottom: 96px;
+  padding: 96px 0;
 }
 
 .search-wrapper h2 {
@@ -365,7 +390,7 @@ fieldset {
   background-size: 100% auto;
   background-repeat: no-repeat;
   color: #FFFFFF;
-  padding: 35px 70px 70px;
+  padding: 50px 70px;
 }
 
 .inner-header-title {
@@ -374,9 +399,12 @@ fieldset {
 }
 
 /*Breadcrumbs*/
+.breadcrumbs {
+  margin-bottom: 40px;
+}
+
 .breadcrumbs-list {
   display: flex;
-  padding-left: 70px;
 }
 
 .breadcrumbs-link {
@@ -389,10 +417,50 @@ fieldset {
 /*Filter*/
 .catalog-filter {
   display: flex;
+  justify-content: space-between;
+}
+
+.catalog-filter-wrapper{
+  display: flex;
+  justify-content: space-between;
+  gap: 70px;
+}
+
+.cost-range-container {
+  display: flex;
+  justify-content: space-between;
+  gap:70px
+}
+
+.inhabitation-cost {
+  display: flex;
+  flex-direction: column;
+}
+
+.cost-range-wrapper {
+  display: flex;
+  margin-bottom: 36px;
+}
+
+.form-actions-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 30px;
 }
 
 .catalog-filter-group {
   width: 150px;
+}
+
+.catalog-filter-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.catalog-filter-title {
+  margin-bottom: 32px;
 }
 
 .catalog-filter-title,
@@ -400,23 +468,23 @@ fieldset {
   font: var(--font-header);
 }
 
-.button-list {
-  display: flex;
-  flex-direction: column;
-}
-
 .cost-range-button {
   width: 145px;
+  min-height: 48px;
+  border-radius: 4px;
 }
 
-.accept,
-.reset {
+.apply-button,
+.reset-button {
   font: var(--font-caption-bold);
+  min-width: 190px;
+  min-height: 36px;
+  border-radius: 4px;
   text-transform: uppercase;
   color: #FFFFFF;
 }
 
-.accept {
+.apply-button {
   background-color: #82B3D3 ;
   border: none;
   border-radius: 4px;
@@ -429,13 +497,13 @@ fieldset {
 
 /*Sorting*/
 .result-container {
-  margin-bottom: 60px;
+  padding: 50px 70px 60px;
 }
 
 .sorting-wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 50px 70px 40px;
+  padding-bottom: 40px;
 }
 
 .hotel-found {
@@ -461,33 +529,80 @@ fieldset {
 
 /*Hotels*/
 .inhabitation-list {
+  width: 1200px;
   margin-bottom: 80px;
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
+  gap: 20px;
+}
+
+.inhabitation-card {
+  max-width: 340px;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 20px;
+  border: solid 1px #E6E6E6;
+  border-radius: 4px;
+}
+
+.inhabitation-card-image {
+  margin-bottom: 16px;
 }
 
 .inhabitation-card-title {
+  margin-bottom: 16px;
   font: var(--font-subtitle-bold);
+}
+
+.cost-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.interaction-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.rating-wrapper {
+  display: flex;
+  justify-content: space-between;
 }
 
 .inhabitation-card-button {
   font: var(--font-header-button);
+  text-align: center;
+  align-content: center;
   text-decoration: none;
+  width: 140px;
+  min-height: 36px;
   color: #FFFFFF;
   background-color: #756157;
+  border-radius: 4px;
 }
 
 .inhabitation-card-favorites-button {
+  width: 140px;
   color: #FFFFFF;
   font: var(--font-header-button);
   background-color: #82B3D3;
+  border-radius: 4px;
 }
 
 .interaction-buttons .selected {
   background-color: #7DB54F;
+  border-radius: 4px;
 }
 
 .inhabitation-rating {
+  width: 140px;
+  text-align: center;
+  padding: 10px;
+  background-color: #F2F2F2;
+  border-radius: 4px;
+  min-height: 36px;
   color: #333333;
   font: var(--font-caption);
   text-transform: uppercase;
@@ -496,6 +611,7 @@ fieldset {
 /*Pagination*/
 .pagination {
   display: flex;
+  width: 1200px;
 }
 
 .pagination-item .pagination-current {
@@ -510,7 +626,9 @@ fieldset {
 }
 
 .pagination-link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 60px;
   height: 60px;
   font: var(--font-pagination);
@@ -520,7 +638,9 @@ fieldset {
 }
 
 .pagination-more-pages {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 60px;
   height: 60px;
   font: var(--font-subtitle);
@@ -533,9 +653,9 @@ fieldset {
 .subscribe-catalog {
   margin: 0 auto;
   text-align: center;
-  padding-top: 96px;
-  margin-bottom: 96px;
+  padding: 96px 0;
 }
+
 .subscribe-catalog-wrapper {
   margin: 0 auto;
 }
@@ -570,4 +690,3 @@ fieldset {
   width: 408px;
   padding: 12px 20px;
 }
-

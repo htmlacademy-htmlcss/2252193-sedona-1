@@ -159,7 +159,6 @@ fieldset {
 /*Advantages*/
 .advantages {
   padding-top: 69px;
-  margin-bottom: 32px;
 }
 
 .advantages-title {
@@ -179,7 +178,6 @@ fieldset {
 }
 
 .advantages-heading {
-  margin-bottom: 62px;
   font: var(--font-title-bold);
   text-transform: uppercase;
 }
@@ -191,7 +189,12 @@ fieldset {
 }
 
 .advantages-item {
-  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 62px;
+  justify-content: center;
+  align-content: center;
+  padding: 10px 80px;
   height: 385px;
 }
 
@@ -229,8 +232,7 @@ fieldset {
 
 /*Services*/
 .services {
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 64px;
 }
 
 .services-wrapper {
@@ -256,15 +258,17 @@ fieldset {
 }
 
 .services-item {
-  /*max-width: 230px;*/
-  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-content: center;
+  padding: 80px;
 }
 
 .services-title {
   font: var(--font-title-bold);
   text-transform: uppercase;
-  padding-top: 190px;
-  margin-bottom: 30px;
 }
 
 .services-item:nth-child(odd) {
@@ -275,7 +279,7 @@ fieldset {
 .search-wrapper {
   margin: 0 auto;
   text-align: center;
-  padding-top: 64px;
+  padding-top: 96px;
   margin-bottom: 96px;
 }
 
@@ -402,7 +406,6 @@ fieldset {
 
 .breadcrumbs-list {
   display: flex;
-  padding-left: 70px;
 }
 
 .breadcrumbs-link {
@@ -437,17 +440,24 @@ fieldset {
 
 .cost-range-wrapper {
   display: flex;
-  padding-top: 32px;
+  margin-bottom: 36px;
 }
 
 .button-list {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  gap: 30px;
 }
 
 .catalog-filter-group {
   width: 150px;
+}
+
+.catalog-filter-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .catalog-filter-title {
@@ -457,14 +467,6 @@ fieldset {
 .catalog-filter-title,
 .inhabitation-cost {
   font: var(--font-header);
-}
-
-.catalog-filter-item {
-  margin-bottom: 16px;
-}
-
-.catalog-filter-item:last-child {
-  margin-bottom: 0;
 }
 
 .cost-range-button {
@@ -496,14 +498,13 @@ fieldset {
 
 /*Sorting*/
 .result-container {
-  padding-bottom: 60px;
-  padding-top: 50px;
+  padding: 50px 70px 60px;
 }
 
 .sorting-wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 0 70px 40px;
+  padding-bottom: 40px;
 }
 
 .hotel-found {
@@ -530,7 +531,6 @@ fieldset {
 /*Hotels*/
 .inhabitation-list {
   width: 1200px;
-  padding: 0 70px;
   margin-bottom: 80px;
   display: grid;
   grid-template-columns: repeat(3, 340px);
@@ -610,7 +610,6 @@ fieldset {
 .pagination {
   display: flex;
   width: 1200px;
-  padding: 0 70px;
 }
 
 .pagination-item .pagination-current {
@@ -625,7 +624,9 @@ fieldset {
 }
 
 .pagination-link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 60px;
   height: 60px;
   font: var(--font-pagination);
@@ -635,7 +636,9 @@ fieldset {
 }
 
 .pagination-more-pages {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 60px;
   height: 60px;
   font: var(--font-subtitle);
@@ -651,6 +654,7 @@ fieldset {
   padding-top: 96px;
   margin-bottom: 96px;
 }
+
 .subscribe-catalog-wrapper {
   margin: 0 auto;
 }

@@ -20,7 +20,7 @@
                         <a class="navigation-link link-nav link" href="#">О Седоне</a>
                     </li>
                     <li class="navigation-item">
-                        <a class="navigation-link navigation-link-current link-nav link"><span class="current-line">Гостиницы</span></a>
+                        <a class="navigation-link navigation-link-current link-nav link">Гостиницы</a>
                     </li>
                 </ul>
             </nav>
@@ -56,8 +56,8 @@
                                     <path fill="#fff" d="m6.5.5-6 5.8v6.2h12V6.3L6.5.5Zm5 11h-10V6.7l5-4.8 5 4.8v4.8Z"/><path fill="#fff" d="M4.5 10.5h1V8h2v2.5h1V7h-4v3.5Z"/></svg>
                             </a>
                         </li>
-                        <li>
-                            <a class="breadcrumbs-link link" >Гостиницы</a>
+                        <li class="breadcrumbs-item">
+                            <a class="breadcrumbs-link link">Гостиницы</a>
                         </li>
                     </ol>
                 </nav>
@@ -69,19 +69,19 @@
                                 <legend class="catalog-filter-title">Инфраструктура:</legend>
                                 <ul class="catalog-filter-list list-reset">
                                     <li class="catalog-filter-item">
-                                        <label class="control">
+                                        <label class="control filter-option">
                                             <input class="control-input" type="checkbox" name="infrastructure-group" value="pool" checked>
                                           Бассейн
                                         </label>
                                     </li>
                                     <li class="catalog-filter-item">
-                                        <label class="control">
+                                        <label class="control filter-option">
                                             <input class="control-input" type="checkbox" name="infrastructure-group" value="parking" checked>
                                           Парковка
                                         </label>
                                     </li>
                                     <li class="catalog-filter-item">
-                                        <label class="control">
+                                        <label class="control filter-option">
                                             <input class="control-input" type="checkbox" name="infrastructure-group" value="wi-fi">
                                           Wi-fi
                                         </label>
@@ -93,19 +93,19 @@
                                 <legend class="catalog-filter-title">Тип Жилья:</legend>
                                 <ul class="catalog-filter-list list-reset">
                                     <li class="catalog-filter-item">
-                                        <label class="control">
+                                        <label class="control filter-option">
                                             <input class="control-input" type="radio" name="inhabitation-group" value="hotel" checked>
                                           Гостиница
                                         </label>
                                     </li>
                                     <li class="catalog-filter-item">
-                                        <label class="control">
+                                        <label class="control filter-option">
                                             <input class="control-input" type="radio" name="inhabitation-group" value="motel" >
                                           Мотель
                                         </label>
                                     </li>
                                     <li class="catalog-filter-item">
-                                        <label class="control">
+                                        <label class="control filter-option">
                                             <input class="control-input" type="radio" name="inhabitation-group" value="apartments">
                                           Апартаменты
                                         </label>
@@ -127,7 +127,7 @@
                                         <input class="cost-range-field field-right" type="number" id="inhabitation-cost-max" name="max-interval" value="9000" step="any" placeholder="9000">
                                     </label>
                                 </div>
-                                <input class="range-line" type="range" id="inhabitation-cost-range" name="inhabitation-cost-range" min="0" max="12000" value="9000" step="any" placeholder="до">
+                                <input class="range-line filter-option" type="range" id="inhabitation-cost-range" name="inhabitation-cost-range" min="0" max="12000" value="9000" step="any" placeholder="до">
                             </fieldset>
 
                             <div class="form-actions-wrapper">
@@ -143,7 +143,7 @@
                 <div class="sorting-wrapper">
                     <h2 class="hotel-found gaps-reset">Найдено гостинец: 38</h2>
                     <div class="sorting-hotels-wrapper">
-                        <select class="drop-down-list" aria-label="Сортировка">
+                        <select class="drop-down-list filter-option" aria-label="Сортировка">
                             <option value="cheap">Сначала дешевые</option>
                             <option value="expensive">Сначала дорогие</option>
                             <option value="popular">Сначала популярные</option>
@@ -151,21 +151,21 @@
 
                         <ul class="display-type-list list-reset">
                             <li class="display-type-item">
-                                <button class="card-grid-toggle card-grid-toggle-current" type="button">
+                                <button class="card-grid-toggle card-grid-toggle-current filter-option" type="button">
                                     <span class="visually-hidden">Таблица</span>
                                     <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="none">
                                         <path fill="#000" d="M4 0H0v6h4V0ZM16 0h-4v6h4V0ZM10 0H6v6h4V0ZM4 8H0v6h4V8ZM16 8h-4v6h4V8ZM10 8H6v6h4V8Z"/></svg>
                                 </button>
                             </li>
                             <li class="display-type-item">
-                                <button class="card-grid-toggle button-one" type="button">
+                                <button class="card-grid-toggle button-one filter-option" type="button">
                                     <span class="visually-hidden">Фото с описанием</span>
                                     <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="none">
                                         <path fill="#000" d="M16 12H0v2h16v-2ZM14 2v6H2V2h12Zm2-2H0v10h16V0Z"/></svg>
                                 </button>
                             </li>
                             <li class="display-type-item">
-                                <button class="card-grid-toggle button-light" type="button">
+                                <button class="card-grid-toggle button-light filter-option" type="button">
                                     <span class="visually-hidden">Список</span>
                                     <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="none">
                                         <path fill="#000" d="M2 0H0v2h2V0ZM16 0H4v2h12V0ZM2 4H0v2h2V4ZM16 4H4v2h12V4ZM2 8H0v2h2V8ZM16 8H4v2h12V8ZM2 12H0v2h2v-2ZM16 12H4v2h12v-2Z"/></svg>
@@ -179,20 +179,22 @@
                     <li class="inhabitation-item">
                         <article class="inhabitation-card">
                             <a class="hotel-card-link" href="#">
-                                <img class="inhabitation-card-image" src="images/hotel-1.jpg" width="300" height="212" alt="Виды отеля Amara Resort & Spa">
-                                <h3 class="inhabitation-card-title gaps-reset">Amara Resort & Spa</h3>
+                                <figure class="list-reset">
+                                    <img class="inhabitation-card-image" src="images/hotel-1.jpg" width="300" height="212" alt="Виды отеля Amara Resort & Spa">
+                                    <figcaption class="inhabitation-card-title gaps-reset">Amara Resort & Spa</figcaption>
+                                </figure>
                             </a>
                             <span class="inhabitation-name">Гостиница</span>
                             <span class="inhabitation-price">от 4000 ₽</span>
                             <a class="inhabitation-card-link link-default link" href="#">Подробнее</a>
                             <button class="inhabitation-card-favorites-button button-secondary button" type="button">В избранное</button>
-                            <ul class="star-raiting list-reset">
-                                <li class="star active"></li>
-                                <li class="star active"></li>
-                                <li class="star active"></li>
-                                <li class="star active"></li>
-                                <li class="star"></li>
-                            </ul>
+                            <div class="star-raiting list-reset">
+                                <span class="star active"></span>
+                                <span class="star active"></span>
+                                <span class="star active"></span>
+                                <span class="star active"></span>
+                                <span class="star"></span>
+                            </div>
                             <span class="inhabitation-rating">Рейтинг: 8,5</span>
                         </article>
                     </li>
@@ -200,20 +202,22 @@
                     <li class="inhabitation-item">
                         <article class="inhabitation-card">
                             <a class="hotel-card-link" href="#">
-                                <img class="inhabitation-card-image" src="images/hotel-2.jpg" width="300" height="212" alt="Виды отеля Villas at Poco Diablo">
-                                <h3 class="inhabitation-card-title gaps-reset">Villas at Poco Diablo</h3>
+                                <figure class="list-reset">
+                                    <img class="inhabitation-card-image" src="images/hotel-2.jpg" width="300" height="212" alt="Виды отеля Villas at Poco Diablo">
+                                    <figcaption class="inhabitation-card-title gaps-reset">Villas at Poco Diablo</figcaption>
+                                </figure>
                             </a>
                             <span class="inhabitation-name">Гостиница</span>
                             <span class="inhabitation-price">от 5000 ₽</span>
                             <a class="inhabitation-card-link link-default link" href="#">Подробнее</a>
                             <button class="inhabitation-card-favorites-button button-selected button" type="button">В избранном</button> <!-- или  тип submit? -->
-                            <ul class="star-raiting list-reset">
-                                <li class="star active"></li>
-                                <li class="star active"></li>
-                                <li class="star active"></li>
-                                <li class="star active"></li>
-                                <li class="star"></li>
-                            </ul>
+                            <div class="star-raiting list-reset">
+                              <span class="star active"></span>
+                              <span class="star active"></span>
+                              <span class="star active"></span>
+                              <span class="star active"></span>
+                              <span class="star"></span>
+                            </div>
                             <span class="inhabitation-rating">Рейтинг: 9,2</span>
                         </article>
                     </li>
@@ -221,20 +225,22 @@
                     <li class="inhabitation-item">
                         <article class="inhabitation-card">
                             <a class="hotel-card-link" href="#">
-                                <img class="inhabitation-card-image" src="images/hotel-3.jpg" width="300" height="212" alt="Виды отеля Desert Quail Inn">
-                                <h3 class="inhabitation-card-title gaps-reset">Desert Quail Inn</h3>
+                                <figure class="list-reset">
+                                    <img class="inhabitation-card-image" src="images/hotel-3.jpg" width="300" height="212" alt="Виды отеля Desert Quail Inn">
+                                    <figcaption class="inhabitation-card-title gaps-reset">Desert Quail Inn</figcaption>
+                                </figure>
                             </a>
                             <span class="inhabitation-name">Гостиница</span>
                             <span class="inhabitation-price">от 2500 ₽</span>
                             <a class="inhabitation-card-link link-default link" href="#">Подробнее</a>
                             <button class="inhabitation-card-favorites-button button-secondary button" type="button">В избранное</button>
-                            <ul class="star-raiting list-reset">
-                                <li class="star active"></li>
-                                <li class="star active"></li>
-                                <li class="star active"></li>
-                                <li class="star"></li>
-                                <li class="star"></li>
-                            </ul>
+                            <div class="star-raiting list-reset">
+                                <span class="star active"></span>
+                                <span class="star active"></span>
+                                <span class="star active"></span>
+                                <span class="star"></span>
+                                <span class="star"></span>
+                            </div>
                             <span class="inhabitation-rating">Рейтинг: 6,9</span>
                         </article>
                     </li>
@@ -242,20 +248,22 @@
                     <li class="inhabitation-item">
                         <article class="inhabitation-card">
                             <a class="hotel-card-link" href="#">
-                                <img class="inhabitation-card-image" src="images/hotel-4.jpg" width="300" height="212" alt="Виды отеля GreenTree Inn">
-                                <h3 class="inhabitation-card-title gaps-reset">GreenTree Inn</h3>
+                                <figure class="list-reset">
+                                    <img class="inhabitation-card-image" src="images/hotel-4.jpg" width="300" height="212" alt="Виды отеля GreenTree Inn">
+                                    <figcaption class="inhabitation-card-title gaps-reset">GreenTree Inn</figcaption>
+                                </figure>
                             </a>
                             <span class="inhabitation-name">Гостиница</span>
                             <span class="inhabitation-price">от 1500 ₽</span>
                             <a class="inhabitation-card-link link-default link" href="#">Подробнее</a>
                             <button class="inhabitation-card-favorites-button button-secondary button" type="button">В избранное</button>
-                            <ul class="star-raiting list-reset">
-                                <li class="star active"></li>
-                                <li class="star active"></li>
-                                <li class="star"></li>
-                                <li class="star"></li>
-                                <li class="star"></li>
-                            </ul>
+                            <div class="star-raiting list-reset">
+                                <span class="star active"></span>
+                                <span class="star active"></span>
+                                <span class="star"></span>
+                                <span class="star"></span>
+                                <span class="star"></span>
+                            </div>
                             <span class="inhabitation-rating">Рейтинг: 5,0</span>
                         </article>
                     </li>
@@ -276,9 +284,10 @@
                         <a class="pagination-link link-secondary link" href="#">4</a>
                     </li>
                     <li class="pagination-item">
-                      <a class="pagination-link pagination-more-pages link-more link" href="#">
-                        <span class="visually-hidden">Больше страниц</span>
-                        ...</a>
+                        <a class="pagination-link pagination-more-pages link-more link" href="#">
+                          <span class="visually-hidden">Больше страниц</span>
+                          ...
+                        </a>
                     </li>
                     <li class="pagination-item">
                         <a class="pagination-link link-secondary link" href="#">10</a>

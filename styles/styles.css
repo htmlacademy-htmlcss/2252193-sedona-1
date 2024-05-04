@@ -77,6 +77,10 @@ fieldset {
   padding: 0;
 }
 
+.filter-option {
+  cursor: pointer;
+}
+
 /*Buttons, links*/
 .button {
   cursor: pointer;
@@ -212,15 +216,15 @@ fieldset {
   min-height: 25px;
 }
 
-.current-line {
+.navigation-link-current {
   position: relative;
 }
 
-.current-line::before {
+.navigation-link-current::before {
   position: absolute;
-  right: 0;
-  bottom: -21px;
-  left: 0;
+  bottom: -1px;
+  left: 16px;
+  right: 16px;
   height: 2px;
   background-color: #756257;
   content: "";
@@ -342,12 +346,13 @@ fieldset {
   align-self: center;
   font: var(--font-title-bold);
   text-transform: uppercase;
-  margin-bottom: 62px;
+  padding-bottom: 31px;
+  margin-bottom: 31px;
 }
 
 .advantages-heading::before {
   position: absolute;
-  bottom: -32px;
+  bottom: -1px;
   width: 60px;
   height: 2px;
   left: 50%;
@@ -356,8 +361,7 @@ fieldset {
   content: "";
 }
 
-.advantages-heading:nth-child(1)::before,
-.advantages-heading:nth-child(7)::before {
+.advantages-item:nth-child(6n+1) .advantages-heading::before {
   background-color: #FFFFFF4D;
 }
 
@@ -531,17 +535,18 @@ fieldset {
   grid-auto-rows: minmax(40px, 1fr);
   grid-gap: 8px;
   width: 160px;
+  align-items: center;
 }
 
 .footer-social-link {
   display: grid;
   position: relative;
-  align-self: center;
-  justify-content: center;
+  align-items: center;
+  justify-items: center;
   box-sizing: content-box;
-  padding: 10px 8px;
+  padding: 3px 3px;
   min-width: 24px;
-  min-height: 20px;
+  min-height: 18px;
   color: #83B3D3;
   background-color: #FFFFFF;
   background-repeat: no-repeat;
@@ -618,6 +623,8 @@ fieldset {
 
 .breadcrumbs-list {
   display: flex;
+  gap: 30px;
+  align-content: center;
 }
 
 .breadcrumbs-link {
@@ -627,10 +634,9 @@ fieldset {
 
 .breadcrumbs-item {
   position: relative;
-  margin-right: 30px;
 }
 
-.breadcrumbs-item::after {
+.breadcrumbs-item:not(:last-child)::after {
   display: inline-block;
   width: 8px;
   height: 11px;
@@ -976,6 +982,7 @@ fieldset {
   align-items: center;
   width: 60px;
   height: 60px;
+  padding: 5px;
   font: var(--font-pagination);
   color: #FFFFFF;
   background-color: #82B3D3;

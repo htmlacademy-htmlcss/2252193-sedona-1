@@ -44,7 +44,7 @@ body {
   min-height: 100%;
   font: var(--font-body);
   color: #000000;
-  background-color: #fff;
+  background-color: #FFFFFF;
 }
 
 .visually-hidden {
@@ -90,9 +90,6 @@ fieldset {
 }
 
 .link {
-  cursor: pointer;
-  background: transparent;
-  border: none;
   text-decoration: none;
 }
 
@@ -190,6 +187,10 @@ fieldset {
    width: 140px;
 }
 
+.navigation {
+  margin-right: auto;
+}
+
 .navigation-logo:hover,
 .navigation-logo:focus {
   opacity: 0.7;
@@ -218,6 +219,7 @@ fieldset {
 
 .navigation-link-current {
   position: relative;
+  cursor: pointer;
 }
 
 .navigation-link-current::before {
@@ -236,7 +238,6 @@ fieldset {
   flex-wrap: wrap;
   gap: 20px;
   max-width: 300px;
-  margin-left: auto;
 }
 
 .actions-link {
@@ -290,12 +291,22 @@ fieldset {
 .hero {
   display: flex;
   flex-direction: column;
-  padding-top: 50px;
-  padding-bottom: 35px;
+  padding: 50px 15px 35px;
   background-image: url("../images/index-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
   min-height: 485px;
+  position: relative;
+}
+
+.hero:after {
+  position: absolute;
+  background-image: url("/images/divider.png");
+  width: 1200px;
+  height: 57px;
+  right: 0;
+  bottom: 0;
+  content: "";
 }
 
 .caption {
@@ -328,16 +339,21 @@ fieldset {
 .advantages-list {
   display: grid;
   grid-template-columns: repeat(3, 400px);
+  grid-auto-rows: minmax(385px, 1fr);
   text-align: center;
 }
 
-.advantages-item {
+.advantages-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.advantages-item:not(:nth-child(-4n+6)){
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: center;
   padding: 10px 80px;
-  height: 385px;
 }
 
 .advantages-heading {
@@ -367,10 +383,6 @@ fieldset {
 
 .advantages-item:nth-child(-4n+6) {
   padding: 0;
-}
-
-.advantages-photo {
-  max-height: 385px;
 }
 
 .advantages-item:nth-child(2) {
@@ -446,7 +458,7 @@ fieldset {
 .search-hotel {
   margin: 0 auto;
   text-align: center;
-  padding: 96px 0;
+  padding: 96px 15px;
 }
 
 .search-heading {
@@ -476,7 +488,7 @@ fieldset {
   background-image: url("../images/subscribe.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
-  padding: 96px 0;
+  padding: 96px 15px;
   margin: 0 auto;
 }
 
@@ -754,7 +766,7 @@ fieldset {
 .sorting-wrapper {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 .sorting-hotels-wrapper {
@@ -980,8 +992,8 @@ fieldset {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60px;
-  height: 60px;
+  min-width: 60px;
+  min-height: 60px;
   padding: 5px;
   font: var(--font-pagination);
   color: #FFFFFF;
@@ -1017,7 +1029,7 @@ fieldset {
 .subscribe-catalog {
   margin: 0 auto;
   text-align: center;
-  padding: 96px 0;
+  padding: 96px 15px;
 }
 
 .subscribe-catalog-wrapper {

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Catalog</title>
     <link rel="stylesheet" href="styles/styles.css">
+  <link rel="icon" type="image/svg" sizes="32x32" href="images/icons/favicon.svg">
 </head>
 <body>
     <header class="page-header">
@@ -20,7 +21,7 @@
                         <a class="navigation-link link-nav link" href="#">О Седоне</a>
                     </li>
                     <li class="navigation-item">
-                        <a class="navigation-link navigation-link-current link-nav link">Гостиницы</a>
+                        <a class="navigation-link navigation-link-current link-nav link"><span class="navigation-current-shadow">Гостиницы</span></a>
                     </li>
                 </ul>
             </nav>
@@ -70,20 +71,23 @@
                                 <ul class="catalog-filter-list list-reset">
                                     <li class="catalog-filter-item">
                                         <label class="control filter-option">
-                                            <input class="control-input" type="checkbox" name="infrastructure-group" value="pool" checked>
-                                          Бассейн
+                                            <input class="visually-hidden control-input" type="checkbox" name="infrastructure-group" value="pool" checked>
+                                            <span class="control-mark"></span>
+                                            <span class="control-label">Бассейн</span>
                                         </label>
                                     </li>
                                     <li class="catalog-filter-item">
                                         <label class="control filter-option">
-                                            <input class="control-input" type="checkbox" name="infrastructure-group" value="parking" checked>
-                                          Парковка
+                                            <input class="visually-hidden control-input" type="checkbox" name="infrastructure-group" value="parking" checked>
+                                            <span class="control-mark"></span>
+                                            <span class="control-label">Парковка</span>
                                         </label>
                                     </li>
                                     <li class="catalog-filter-item">
                                         <label class="control filter-option">
-                                            <input class="control-input" type="checkbox" name="infrastructure-group" value="wi-fi">
-                                          Wi-fi
+                                            <input class="visually-hidden control-input" type="checkbox" name="infrastructure-group" value="wi-fi">
+                                            <span class="control-mark"></span>
+                                            <span class="control-label">Wi-fi</span>
                                         </label>
                                     </li>
                                 </ul>
@@ -94,20 +98,23 @@
                                 <ul class="catalog-filter-list list-reset">
                                     <li class="catalog-filter-item">
                                         <label class="control filter-option">
-                                            <input class="control-input" type="radio" name="inhabitation-group" value="hotel" checked>
-                                          Гостиница
+                                            <input class="visually-hidden control-input" type="radio" name="inhabitation-group" value="hotel" checked>
+                                            <span class="control-mark"></span>
+                                            <span class="control-label">Гостиница</span>
                                         </label>
                                     </li>
                                     <li class="catalog-filter-item">
                                         <label class="control filter-option">
-                                            <input class="control-input" type="radio" name="inhabitation-group" value="motel" >
-                                          Мотель
+                                            <input class="visually-hidden control-input" type="radio" name="inhabitation-group" value="motel">
+                                            <span class="control-mark"></span>
+                                            <span class="control-label">Мотель</span>
                                         </label>
                                     </li>
                                     <li class="catalog-filter-item">
                                         <label class="control filter-option">
-                                            <input class="control-input" type="radio" name="inhabitation-group" value="apartments">
-                                          Апартаменты
+                                            <input class="visually-hidden control-input" type="radio" name="inhabitation-group" value="apartments">
+                                            <span class="control-mark"></span>
+                                            <span class="control-label">Апартаменты</span>
                                         </label>
                                     </li>
                                 </ul>
@@ -118,16 +125,25 @@
                             <fieldset class="inhabitation-cost gaps-reset">
                                 <legend class="catalog-filter-title">Стоимость, ₽:</legend>
                                 <div class="cost-range-wrapper">
-                                    <label class="form-label field-filter-min" for="inhabitation-cost-min">
+                                    <label class="field-filter-min" for="inhabitation-cost-min">
                                         <span class="field-form-text">от</span>
                                         <input class="cost-range-field field-left" type="number" id="inhabitation-cost-min" name="min-interval" value="0" step="any" placeholder="0">
                                     </label>
-                                    <label class="form-label field-filter-max" for="inhabitation-cost-max">
+                                    <label class="field-filter-max" for="inhabitation-cost-max">
                                         <span class="field-form-text">до</span>
                                         <input class="cost-range-field field-right" type="number" id="inhabitation-cost-max" name="max-interval" value="9000" step="any" placeholder="9000">
                                     </label>
                                 </div>
-                                <input class="range-line filter-option" type="range" id="inhabitation-cost-range" name="inhabitation-cost-range" min="0" max="12000" value="9000" step="any" placeholder="до">
+                                <div class="range-scale">
+                                    <div class="range-bar" style="left: 0; width: 227px">
+                                        <button class="range-toggle toggle-min" type="button">
+                                            <span class="visually-hidden">Изменить минимальную цену.</span>
+                                        </button>
+                                        <button class="range-toggle toggle-max" type="button">
+                                            <span class="visually-hidden">Изменить максимальную цену.</span>
+                                        </button>
+                                    </div>
+                                </div>
                             </fieldset>
 
                             <div class="form-actions-wrapper">

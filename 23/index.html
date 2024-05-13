@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="icon" type="image/svg" sizes="32x32" href="images/icons/favicon.svg">
     <link rel="icon" href="favicon.ico">
-
   <base href="https://htmlacademy-htmlcss.github.io/2252193-sedona-1/23/">
 </head>
 <body>
@@ -18,7 +17,7 @@
             <nav class="navigation">
                 <ul class="navigation-list list-reset">
                     <li class="navigation-item">
-                      <a class="navigation-link navigation-link-current link-nav link"><span class="navigation-current-shadow">Главная</span></a>
+                      <a class="navigation-link navigation-link-current link-nav link">Главная</a>
                     </li>
                     <li class="navigation-item">
                         <a class="navigation-link link-nav link" href="#">О Седоне</a>
@@ -173,113 +172,106 @@
         </a>
     </footer>
 
-    <div class="modal-container modal-container-close">
-        <div class="modal modal-auth">
+    <fieldset class="modal-container modal-container-close">
+        <fieldset class="modal modal-auth">
             <button class="modal-close-button" type="button">
                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15">
-                    <path fill="#000" d="M14.49 1.783 13.199.49 7.49 6.198 1.783.491.49 1.783 6.198 7.49.49 13.198l1.293 1.293L7.49 8.783l5.708 5.708 1.293-1.293-5.708-5.707 5.708-5.708Z"/></svg>
+                    <path fill="currentColor" d="M14.49 1.783 13.199.49 7.49 6.198 1.783.491.49 1.783 6.198 7.49.49 13.198l1.293 1.293L7.49 8.783l5.708 5.708 1.293-1.293-5.708-5.707 5.708-5.708Z"/></svg>
                 <span class="visually-hidden">Закрыть</span>
             </button>
 
             <section class="modal-content">
                 <h2 class="modal-title gaps-reset">Поиск гостиницы в Седоне</h2>
                 <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
-                    <div class="field-group">
-
-                        <label class="check-in-date" for="check-in">Дата Заезда:</label>
-                        <div class="field-input-wrapper check-in-wrapper">
-                            <button class="calendar modal-button button" type="button">
+                    <fieldset class="field-group">
+                        <fieldset class="field-input-wrapper check-in-wrapper">
+                            <label class="check-in-date-label" for="check-in">Дата Заезда:</label>
+                            <input class="check-in-input field" value="27 апреля 2020" type="text" id="check-in" name="date-check-in" placeholder="Укажите дату заезда">
+                            <div class="calendar-wrapper button">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" fill="currentColor">
-                                    <path d="M5.75 10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5Z"/>
-                                    <path d="M15 2h-2V0h-1v2H4V0H3v2H1c-.6 0-1 .4-1 1v11c0 .5.4 1 1 1h14c.5 0 1-.5 1-1V3c0-.6-.5-1-1-1Zm0 12H1V7h14v7ZM1 6V3h2v2h1V3h8v2h1V3h2v3H1Z"/>
-                                    <path d="M8 10c.3 0 .5-.2.5-.5S8.3 9 8 9s-.5.2-.5.5.2.5.5.5Zm2.25 0c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5Zm-4.5 1c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM3.5 10c.3 0 .5-.2.5-.5S3.8 9 3.5 9s-.5.2-.5.5.2.5.5.5Zm0 1c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM8 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5Zm2.25 0c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5Zm2.25-1c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5Zm0 1c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5Z"/></svg>
-                            </button>
-                            <input class="check-in-form field" value="27 апреля 2020" type="text" id="check-in" name="date-check-in" placeholder="Укажите дату заезда">
-                            <p class="field-input-info text-error gaps-reset">Мы не можем отправить вас в прошлое.</p>
-                        </div>
+                                  <path d="M5.75 10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5Z"/>
+                                  <path d="M15 2h-2V0h-1v2H4V0H3v2H1c-.6 0-1 .4-1 1v11c0 .5.4 1 1 1h14c.5 0 1-.5 1-1V3c0-.6-.5-1-1-1Zm0 12H1V7h14v7ZM1 6V3h2v2h1V3h8v2h1V3h2v3H1Z"/>
+                                  <path d="M8 10c.3 0 .5-.2.5-.5S8.3 9 8 9s-.5.2-.5.5.2.5.5.5Zm2.25 0c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5Zm-4.5 1c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM3.5 10c.3 0 .5-.2.5-.5S3.8 9 3.5 9s-.5.2-.5.5.2.5.5.5Zm0 1c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM8 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5Zm2.25 0c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5Zm2.25-1c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5Zm0 1c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5Z"/></svg>
+                            </div>
+                            <p class="field-input-info selection-date-text-error gaps-reset">Мы не можем отправить вас в прошлое.</p>
+                        </fieldset>
 
-                        <label class="check-out-date" for="check-out">Дата Выезда:</label>
-                        <div class="field-input-wrapper check-out-wrapper">
-                            <button class="calendar modal-button button" type="button">
+                        <fieldset class="field-input-wrapper check-out-wrapper">
+                            <label class="check-out-date-label" for="check-out">Дата Выезда:</label>
+                            <input class="check-out-input field" value="1 сентября 2023" type="text" id="check-out" name="date-check-out" placeholder="Укажите дату выезда">
+                            <div class="calendar-wrapper">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" fill="currentColor">
-                                    <path d="M5.75 10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5Z"/>
-                                    <path d="M15 2h-2V0h-1v2H4V0H3v2H1c-.6 0-1 .4-1 1v11c0 .5.4 1 1 1h14c.5 0 1-.5 1-1V3c0-.6-.5-1-1-1Zm0 12H1V7h14v7ZM1 6V3h2v2h1V3h8v2h1V3h2v3H1Z"/>
-                                    <path d="M8 10c.3 0 .5-.2.5-.5S8.3 9 8 9s-.5.2-.5.5.2.5.5.5Zm2.25 0c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5Zm-4.5 1c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM3.5 10c.3 0 .5-.2.5-.5S3.8 9 3.5 9s-.5.2-.5.5.2.5.5.5Zm0 1c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM8 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5Zm2.25 0c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5Zm2.25-1c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5Zm0 1c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5Z"/></svg>
-                            </button>
-                            <input class="check-out-form field" value="1 сентября 2023" type="text" id="check-out" name="date-check-out" placeholder="Укажите дату выезда">
+                                  <path d="M5.75 10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5Z"/>
+                                  <path d="M15 2h-2V0h-1v2H4V0H3v2H1c-.6 0-1 .4-1 1v11c0 .5.4 1 1 1h14c.5 0 1-.5 1-1V3c0-.6-.5-1-1-1Zm0 12H1V7h14v7ZM1 6V3h2v2h1V3h8v2h1V3h2v3H1Z"/>
+                                  <path d="M8 10c.3 0 .5-.2.5-.5S8.3 9 8 9s-.5.2-.5.5.2.5.5.5Zm2.25 0c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5Zm-4.5 1c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM3.5 10c.3 0 .5-.2.5-.5S3.8 9 3.5 9s-.5.2-.5.5.2.5.5.5Zm0 1c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM8 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5Zm2.25 0c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5Zm2.25-1c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5Zm0 1c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5Z"/></svg>
+                            </div>
                             <p class="field-input-info gaps-reset">На эти даты есть свободные места. Пока есть.</p>
-                        </div>
+                        </fieldset>
 
-                        <div class="field-row-wrapper">
-                            <div class="wrapper-adult">
-                                <label class="field-adult" for="adult">Взрослые:</label>
-                                <div class="field-selection-guests">
-                                    <span class="button-wrapper">
-                                        <button class="field-input-button button-minus modal-button button" type="button">
+                        <fieldset class="field-row-wrapper">
+                            <fieldset class="adult-wrapper">
+                                <label class="field-adult-label" for="adult">Взрослые:</label>
+                                <div class="selection-guests-field">
+                                    <div class="button-wrapper">
+                                        <button class="field-input-button button-minus button" type="button">
                                             <span class="visually-hidden">Уменьшить количество гостей</span>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="15" height="2" viewBox="0 0 15 2">
                                               <path fill="currentColor" d="M.4 0v2h14V0H.4Z"/></svg>
                                         </button>
-                                    </span>
+                                    </div>
 
-                                    <input class="adult-number-form field" value="2" type="number" id="adult" name="adults" placeholder="Укажите количество гостей">
+                                    <input class="adult-number-input spin-button field" value="2" type="number" id="adult" name="adults" placeholder="Укажите количество гостей">
 
-                                    <span class="button-wrapper">
-                                        <button class="field-input-button modal-button button" type="button">
+                                    <div class="button-wrapper">
+                                        <button class="field-input-button button" type="button">
                                             <span class="visually-hidden">Увеличить количество гостей</span>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
                                                 <path fill="currentColor" d="M14 6H8V0H6v6H0v2h6v6h2V8h6V6Z"/></svg>
                                         </button>
-                                    </span>
+                                    </div>
                                 </div>
-                            </div>
+                            </fieldset>
 
-                            <div class="wrapper-children">
-                                <div class="form-label form-label-icon">
-                                    <label class="field-children" for="children">Дети:</label>
-                                    <span class="tooltip">
+                            <fieldset class="children-wrapper">
+                                <div class="children-form-label">
+                                    <label class="field-children-label" for="children">Дети:</label>
+                                    <div class="tooltip">
                                         <button class="tooltip-toggle button" type="button" aria-labelledby="tooltip-label-date">
                                             <span class="visually-hidden">Показать дополнительную информацию</span>
                                         </button>
-                                        <span class="tooltip-text gaps-reset" role="tooltip" id="tooltip-label-date">Укажите количество детей,
+                                        <p class="tooltip-text gaps-reset" role="tooltip" id="tooltip-label-date">Укажите количество детей,
                                             которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются
-                                            бесплатно.</span>
-                                        <span class="tooltip-arrow-up"></span>
-                                    </span>
+                                            бесплатно.</p>
+                                    </div>
                                 </div>
 
-                                <div class="field-selection-guests">
-                                    <span class="button-wrapper">
-                                        <button class="field-input-button button-minus modal-button button" type="button">
+                                <fieldset class="selection-guests-field">
+                                    <div class="button-wrapper">
+                                        <button class="field-input-button button" type="button">
                                             <span class="visually-hidden">Уменьшить количество гостей</span>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="15" height="2" viewBox="0 0 14 2">
                                                 <path fill="currentColor" d="M.4 0v2h14V0H.4Z"/></svg>
                                         </button>
-                                    </span>
+                                    </div>
 
-                                    <input class="children-number-form field" value="2" type="number" id="children" name="children" placeholder="Укажите количество гостей">
+                                    <input class="children-number-input spin-button field" value="2" type="number" id="children" name="children" placeholder="Укажите количество гостей">
 
-                                    <span class="button-wrapper">
-                                        <button class="field-input-button modal-button button" type="button">
+                                    <div class="button-wrapper">
+                                        <button class="field-input-button button" type="button">
                                             <span class="visually-hidden">Увеличить количество гостей</span>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
                                                 <path fill="currentColor" d="M14 6H8V0H6v6H0v2h6v6h2V8h6V6Z"/></svg>
                                         </button>
-                                    </span>
+                                    </div>
+                                </fieldset>
+                            </fieldset>
+                        </fieldset>
 
-                                </div>
-                            </div>
-                        </div>
-
-                        <button class="modal-search button" type="button">Найти
-                            <span class="visually-hidden">Найти</span>
-                        </button>
-                    </div>
+                        <button class="modal-search-button button" type="button">Найти</button>
+                    </fieldset>
                 </form>
             </section>
-
-        </div>
-    </div>
-    </div>
+        </fieldset>
+    </fieldset>
 </body>
 </html>

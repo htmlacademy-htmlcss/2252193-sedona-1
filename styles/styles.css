@@ -69,6 +69,8 @@ body {
 
 fieldset {
   border: none;
+  margin: 0;
+  padding: 0;
 }
 
 .list-reset {
@@ -91,6 +93,12 @@ fieldset {
 
 .link {
   text-decoration: none;
+}
+
+.spin-button::-webkit-outer-spin-button,
+.spin-button::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
 }
 
 /*Status*/
@@ -118,7 +126,7 @@ fieldset {
 }
 
 .button-default:hover,
-.button-default:focus {
+.button-default:focus-visible {
   background-color: #615048;
 }
 
@@ -137,7 +145,7 @@ fieldset {
 }
 
 .button-secondary:hover,
-.button-secondary:focus {
+.button-secondary:focus-visible {
   background-color: #68A2CA;
 }
 
@@ -150,7 +158,7 @@ fieldset {
   color: #FFFFFF80;
 }
 
-.button-tertiary:focus {
+.button-tertiary:focus-visible {
   outline: 3px #83B3D3 solid;
 }
 
@@ -160,7 +168,7 @@ fieldset {
 }
 
 .button-selected:hover,
-.button-selected:focus {
+.button-selected:focus-visible {
   background-color: #6C9E42;
 }
 
@@ -168,7 +176,6 @@ fieldset {
   background-color: #7DB54F;
   color: #FFFFFF4C;
 }
-
 
 /*Pages*/
 /*Header*/
@@ -220,10 +227,6 @@ fieldset {
 .navigation-link-current {
   position: relative;
   cursor: pointer;
-}
-
-.navigation-current-shadow {
-  text-shadow: 0 5px 4px #D6D5D6;
 }
 
 .navigation-link-current::before {
@@ -552,7 +555,6 @@ fieldset {
   grid-template-columns: repeat(3 , 40px);
   grid-auto-rows: minmax(40px, 1fr);
   grid-gap: 8px;
-  width: 160px;
   align-items: center;
 }
 
@@ -689,10 +691,6 @@ fieldset {
   gap: 70px;
 }
 
-.catalog-filter-group {
-  width: 150px;
-}
-
 .catalog-filter-title {
   margin-bottom: 32px;
 }
@@ -713,8 +711,8 @@ fieldset {
   opacity: 0.5;
 }
 
-.control-input[type="checkbox"]:focus+.control-mark,
-.control-input[type="radio"]:focus+.control-mark {
+.control-input[type="checkbox"]:focus + .control-mark,
+.control-input[type="radio"]:focus + .control-mark {
   outline: 3px #83B3D3 solid;
 }
 
@@ -732,33 +730,24 @@ fieldset {
   border-radius: 4px;
 }
 
-.control-input[type="checkbox"]:checked+.control-mark::before,
-.control-input[type="checkbox"]:checked+.control-mark::after {
+.control-input[type="checkbox"]:checked + .control-mark::before {
   position: absolute;
   content: "";
-  background-color: #3F5E72;
-  height: 2px;
+  background-image: url("../images/icons/check-mark.svg");
+  width: 13px;
+  height: 11px;
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.control-input[type="checkbox"]:checked+.control-mark::before {
-  transform: rotate(34deg);
-  width: 5px;
-  top: 11px;
-  left: 5px;
-}
-
-.control-input[type="checkbox"]:checked+.control-mark::after {
-  transform: rotate(307deg);
-  width: 11px;
-  top: 9px;
-  left: 7px;
-}
-
-.control-input[type="radio"]+.control-mark {
+.control-input[type="radio"] + .control-mark {
   border-radius: 50%;
 }
 
-.control-input[type="radio"]:checked+.control-mark::before {
+.control-input[type="radio"]:checked + .control-mark::before {
   position: absolute;
   top: 5px;
   left: 5px;
@@ -828,12 +817,6 @@ fieldset {
   outline-offset: -2px;
 }
 
-.cost-range-field::-webkit-outer-spin-button,
-.cost-range-field::-webkit-inner-spin-button {
-  appearance: none;
-  margin: 0;
-}
-
 .range-scale {
   position: relative;
   width: 287px;
@@ -864,7 +847,7 @@ fieldset {
 
 .toggle-max {
   top: -8px;
-  right: 0;
+  left: 227px;
 }
 
 .form-actions-wrapper {
@@ -959,7 +942,7 @@ fieldset {
   border: 2px #000000 solid;
 }
 
-.card-grid-toggle:focus {
+.card-grid-toggle:focus-visible {
   border: 2px #68A2CA solid;
 }
 
@@ -1028,7 +1011,7 @@ fieldset {
   background-color: #FFFFFF;
 }
 
-.active {
+.active-star {
   background-image: url(../images/icons/star.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -1221,7 +1204,7 @@ fieldset {
   margin: auto;
   padding: 64px 70px;
   background-color: #FFFFFF;
-  box-shadow: #00000026;
+  box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
 }
 
 .modal-auth {
@@ -1244,27 +1227,24 @@ fieldset {
   cursor: pointer;
 }
 
-.modal-close-button svg {
-  fill: #000000;
-  outline: none;
+.modal-close-button {
+  color: #000000;
 }
 
 .modal-close-button:hover {
   background-color: #E6E6E6;
-  outline: none;
 }
 
-.modal-close-button:focus {
+.modal-close-button:focus-visible {
   background-color: #E6E6E6;
   outline: 3px solid #83B3D3;
 }
 
 .modal-close-button:active {
   background-color: #E6E6E6;
-  outline: none;
 }
 
-.modal-close-button:active svg {
+.modal-close-button:active {
   opacity: 0.3;
 }
 
@@ -1276,80 +1256,34 @@ fieldset {
 }
 
 .field-group {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   width: 577px;
-  grid-template-columns: 136px 1fr;
-  grid-auto-rows: minmax(60px, auto);
-  grid-row-gap: 25px;
+  gap: 23px;
 }
 
-.calendar {
-  position: absolute;
-  top: 14px;
-  left: 400px;
-  color: #AAAAAA;
-  padding: 2px;
+.field-input-wrapper {
+  display: grid;
+  grid-row-gap: 4px;
+  grid-template-columns: 137px 440px;
+  grid-auto-rows: minmax(21px, auto);
 }
 
-.modal-button {
-  color: #AAAAAA;
-}
-
-.modal-button:hover {
-  color: #000000;
-}
-
-.modal-button:focus {
-  outline: 3px #82B3D3 solid;
-  border-radius: 4px;
-}
-
-.modal-button:active {
-  color: #0000004D;
-}
-
-.check-in-date {
-  grid-column: 1/2;
-  grid-row: 1/2;
-}
-
-.check-in-wrapper {
-  position: relative;
-  grid-column: 2/3;
-  grid-row: 1/2;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.check-out-date {
-  grid-column: 1/2;
+.field-input-info {
   grid-row: 2/3;
-}
-
-.check-out-wrapper {
-  position: relative;
   grid-column: 2/3;
-  grid-row: 2/3;
-  display: flex;
-  flex-wrap: wrap;
 }
 
-.field-row-wrapper {
-  grid-row: 3/4;
-  grid-column: 1/3;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 25px;
-}
-
-.check-in-date,
-.check-out-date {
+.check-in-date-label,
+.check-out-date-label {
   font: var(--font-header);
-  padding-top: 10px;
+  align-self: center;
 }
 
-.check-in-form,
-.check-out-form {
+.check-in-input,
+.check-out-input {
+  grid-row: 1/2;
+  grid-column: 2/3;
   font: var(--font-header-button);
   padding: 5px 48px 5px 20px;
   appearance: none;
@@ -1358,10 +1292,18 @@ fieldset {
   border-radius: 4px;
   width: 440px;
   min-height: 48px;
-  margin-bottom: 4px;
 }
 
-.text-error {
+.calendar-wrapper {
+  grid-row: 1/2;
+  grid-column: 2/3;
+  justify-self: end;
+  align-content: center;
+  color: #AAAAAA;
+  padding-right: 20px;
+}
+
+.selection-date-text-error {
   color: #FF5757;
 }
 
@@ -1370,57 +1312,74 @@ fieldset {
   padding: 0 20px;
 }
 
-.field-input-wrapper .field:hover {
+.check-in-input:hover,
+.check-out-input:hover {
   background-color: #E6E6E6;
 }
 
-.field-input-wrapper .field:focus {
+.check-in-input:focus,
+.check-out-input:focus {
   background-color: #E6E6E6;
   outline: 3px solid #83B3D3;
 }
 
-.field-input-wrapper .field:active {
+.check-in-input:active,
+.check-out-input:active {
   background-color: #E6E6E6;
   outline: 3px solid #000000;
 }
 
-.wrapper-adult,
-.wrapper-children {
+.field-row-wrapper {
   display: flex;
-  min-width: 242px;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 48px;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.adult-wrapper {
+  display: grid;
+  grid-auto-rows: minmax(48px, auto);
+  grid-template-columns: 1fr 110px;
+  grid-column-gap: 46px;
   justify-content: space-between;
 }
 
-.field-adult,
-.field-children {
+.children-wrapper {
+  display: grid;
+  grid-auto-rows: minmax(48px, auto);
+  grid-template-columns: 1fr 110px;
+  grid-column-gap: 46px;
+  justify-content: space-between;
+}
+
+.field-adult-label,
+.field-children-label {
   font: var(--font-header);
-  width: 137px;
-  padding-right: 10px;
   align-content: center;
 }
 
-.form-label {
+.children-form-label {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-content: center;
+}
+
+.field-children-label {
   position: relative;
-  /*padding-right: 26px;*/
-  width: 110px;
-  align-content: center;
-}
-
-.adult-number-form::-webkit-outer-spin-button,
-.adult-number-form::-webkit-inner-spin-button,
-.children-number-form::-webkit-outer-spin-button,
-.children-number-form::-webkit-inner-spin-button {
-  appearance: none;
-  margin: 0;
 }
 
 .tooltip {
-  position: absolute;
+  align-self: center;
+  right: 20px;
   width: 26px;
   height: 26px;
 }
 
 .tooltip-toggle {
+  position: absolute;
   background-image: url("../images/icons/info.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -1467,82 +1426,82 @@ fieldset {
   display: block;
 }
 
-.field-selection-guests {
-  display: flex;
-  flex-wrap: wrap;
-  min-width: 110px;
-  border-radius: 4px;
-  overflow: auto;
-}
-
-.adult-number-form,
-.children-number-form {
+.adult-number-input,
+.children-number-input {
   font: var(--font-header-button);
   width: 31px;
   min-height: 48px;
-  padding: 14px 5px;
   position: relative;
   border: none;
   background-color: #F2F2F2;
   text-align: center;
 }
+
+.selection-guests-field {
+   display: flex;
+   min-width: 110px;
+   border-radius: 4px;
+   overflow: auto;
+ }
 
 .button-wrapper {
   display: flex;
   width: 40px;
+  min-height: 48px;
   background-color: #F2F2F2;
   justify-content: center;
+  align-self: center;
 }
 
 .field-input-button {
   display: flex;
-  position: relative;
   width: 20px;
   height: 20px;
   border: none;
   background-color: #F2F2F2;
-  padding: 5px 5px;
-  justify-self: center;
+  padding: 0;
+  justify-content: center;
   align-self: center;
 }
 
 .field-input-button svg {
-  position: absolute;
-  top: 30%;
-  left: 30%;
-  transform: translate(-20%, -20%);
+  display: flex;
+  align-self: center;
 }
 
-.button-minus svg {
-  position: absolute;
-  top: 50%;
-  left: 28%;
-  transform: translate(-20%, -35%);
+.field-input-button {
+  color: #AAAAAA;
 }
 
-.modal-search {
-  grid-column: 1/3;
-  grid-row: 4/5;
+.field-input-button:hover {
+  color: #000000;
+}
+
+.field-input-button:focus-visible {
+  outline: 3px #82B3D3 solid;
+  border-radius: 4px;
+}
+
+.field-input-button:active {
+  color: #0000004D;
+}
+
+.modal-search-button {
+  flex-grow: 1;
+  min-height: 60px;
   background-color: #83B3D3;
   border-radius: 10px;
-  border: none;
   font: var(--font-header);
   color: #ffffff;
-  text-transform: uppercase;
   padding: 10px 20px;
-  text-align: center;
-  appearance: none;
-  box-sizing: border-box;
-  width: 577px;
-  min-height: 60px;
 }
 
-.modal-search:hover,
-.modal-search:focus {
+.modal-search-button:hover,
+.modal-search-button:focus-visible {
   background-color: #68A2CA;
 }
 
-.modal-search:active {
+.modal-search-button:active {
   background-color: #68A2CA;
   color: #FFFFFF4D;
 }

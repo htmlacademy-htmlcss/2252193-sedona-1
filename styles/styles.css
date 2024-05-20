@@ -221,7 +221,7 @@ fieldset {
   display: flex;
   padding: 0 70px;
   min-height: 64px;
-  gap: 30px;
+  gap: 28px;
 }
 
 .navigation-logo {
@@ -657,6 +657,7 @@ fieldset {
 
 .footer-wrapper {
   min-height: 50px;
+  padding: 0 1px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

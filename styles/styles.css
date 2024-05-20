@@ -58,16 +58,13 @@ body {
   overflow: hidden;
 }
 
-* {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
 .gaps-reset {
-  margin: 0;
-  padding: 0;
-}
-
-fieldset {
   border: none;
   margin: 0;
   padding: 0;
@@ -422,7 +419,6 @@ fieldset {
   width: 400px;
   min-height: 385px;
   padding: 10px 80px;
-  box-sizing: border-box;
   flex-grow: 1;
 }
 
@@ -825,8 +821,9 @@ fieldset {
 }
 
 .catalog-filter-title {
-  width: 160px;
+  width: 151px;
   margin-bottom: 32px;
+  padding: 0;
 }
 
 .cost-range-title {
@@ -1331,6 +1328,7 @@ fieldset {
   min-height: 215px;
   width: 684px;
   margin: 0 auto;
+  margin-top: -6px;
   text-align: center;
   align-self: center;
 }

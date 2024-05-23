@@ -358,14 +358,16 @@ body {
   border-radius: 50%;
 }
 
-.button-navigation {
+.link-navigation-user {
   align-self: center;
+  text-align: center;
   min-width: 160px;
   min-height: 36px;
   padding: 10px;
   color: #FFFFFF;
   background-color: #756157;
   font: var(--font-header-button);
+  text-transform: uppercase;
   line-height: 16px;
   border-radius: 4px;
 }
@@ -707,7 +709,7 @@ body {
 
 .footer-social-list {
   display: grid;
-  grid-template-columns: repeat(3 , 40px);
+  grid-template-columns: repeat(3, 40px);
   grid-auto-rows: minmax(40px, 1fr);
   grid-gap: 8px;
   align-items: center;
@@ -1182,11 +1184,11 @@ body {
 }
 
 .card-grid-toggle-current {
-   width: 48px;
-   height: 48px;
-   border: 2px #000000 solid;
-   background-color: #FFFFFF;
-   border-radius: 4px;
+  width: 48px;
+  height: 48px;
+  border: 2px #000000 solid;
+  background-color: #FFFFFF;
+  border-radius: 4px;
 }
 
 /*Hotels*/
@@ -1365,7 +1367,7 @@ body {
 }
 
 .link-more,
-.link-more:disabled{
+.link-more:disabled {
   color: var(--text-color-primary);
 }
 
@@ -1673,10 +1675,10 @@ body {
 }
 
 .selection-guests-field {
-   display: flex;
-   min-width: 110px;
-   border-radius: 4px;
-   overflow: auto;
+  display: flex;
+  min-width: 110px;
+  border-radius: 4px;
+  overflow: auto;
 }
 
 .button-wrapper {

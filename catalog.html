@@ -128,11 +128,11 @@
                                 <div class="cost-range-wrapper">
                                     <label class="field-filter-min" for="inhabitation-cost-min">
                                         <span class="field-form-text">от</span>
-                                        <input class="cost-range-field spin-button field-left" type="number" id="inhabitation-cost-min" name="min-interval" value="0" step="any" placeholder="0">
+                                        <input class="cost-range-field spin-button field-left" type="number" id="inhabitation-cost-min" name="min-interval" value="0" step="any" placeholder="0" required>
                                     </label>
                                     <label class="field-filter-max" for="inhabitation-cost-max">
                                         <span class="field-form-text">до</span>
-                                        <input class="cost-range-field spin-button field-right" type="number" id="inhabitation-cost-max" name="max-interval" value="9000" step="any" placeholder="9000">
+                                        <input class="cost-range-field spin-button field-right" type="number" id="inhabitation-cost-max" name="max-interval" value="9000" step="any" placeholder="9000" required>
                                     </label>
                                 </div>
                                 <div class="range-scale">
@@ -227,7 +227,7 @@
                             <span class="inhabitation-name">Гостиница</span>
                             <span class="inhabitation-price">От 5000 ₽</span>
                             <a class="inhabitation-card-link link-default link" href="#">Подробнее</a>
-                            <button class="inhabitation-card-favorites-button button-selected button" type="button">В избранном</button> <!-- или  тип submit? -->
+                            <button class="inhabitation-card-favorites-button button-selected button" type="button">В избранном</button>
                             <div class="star-rating list-reset">
                               <span class="star active-star"></span>
                               <span class="star active-star"></span>
@@ -309,7 +309,6 @@
                     <li class="pagination-item">
                         <a class="pagination-link link-secondary link" href="#">10</a>
                     </li>
-
                 </ol>
             </section>
 
@@ -318,7 +317,7 @@
                     <h2 class="subscribe-catalog-heading gaps-reset">Подпишитесь на рассылку</h2>
                     <p class="subscribe-catalog-text gaps-reset">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
                     <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-                        <input class="subscribe-form-field"  placeholder="Ваш e-mail" type="email" id="subscribe-email" name="subscribe-email">
+                        <input class="subscribe-form-field"  placeholder="Ваш e-mail" type="email" id="subscribe-email" name="subscribe-email" required>
                         <button class="button-subscribe button-secondary button" type="submit">Подписаться</button>
                     </form>
                 </div>
